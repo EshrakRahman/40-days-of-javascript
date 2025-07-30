@@ -41,9 +41,25 @@
 
 // leetcode day 3 problem 
 
-console.log(
-    "I am js file"
-);
+// console.log(
+//     "I am js file"
+// );
 
 
-document.getElementById("someId").innerHTML = "I am something";
+// document.getElementById("someId").innerHTML = "I am something";
+
+var map = function(arr, fn) {
+    let narr = [];
+    for(let i = 0; i < arr.length; i++) {
+        narr[i] = fn(arr[i], i);
+
+    }
+    return narr;
+    
+};
+let arr = [1,2,3];
+// let plusone = function plusone(n) { return n + 1; };
+// let plusI = function plusI(n, i) { return n + i; };
+// let constant = function constant() { return 42; };
+console.log(map(arr, function plusone(n) { return n + 1; }));
+
