@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+        <title>Every layout relearn CSS layout by example [2&amp;nbsp;ed.] - DOKUMEN.PUB</title>
+        <meta name="description" content="...">
+	
+	    	<link rel="canonical" href="https://dokumen.pub/every-layout-relearn-css-layout-by-example-2nbsped.html"/>
+	
+        <meta property="og:url" content="https://dokumen.pub/every-layout-relearn-css-layout-by-example-2nbsped.html"/>
+        <meta property="og:title" content="Every layout relearn CSS layout by example [2&amp;nbsp;ed.] - DOKUMEN.PUB"/>
+        <meta property="og:description" content="..."/>
+        <meta property="og:image" content="https://dokumen.pub/img/every-layout-relearn-css-layout-by-example-2nbsped.jpg"/>
+        <meta property="og:site_name" content="dokumen.pub"/>		
+        <meta property="og:type" content="website"/>
+
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@dokumen.pub"/>
+        <meta name="twitter:title" content="Every layout relearn CSS layout by example [2&amp;nbsp;ed.] - DOKUMEN.PUB"/>
+        <meta name="twitter:description" content="..."/>
+        <meta name="twitter:image" content="https://dokumen.pub/img/every-layout-relearn-css-layout-by-example-2nbsped.jpg"/>
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="application-name" content="dokumen.pub"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://dokumen.pub/dokumenpub/assets/img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="https://dokumen.pub/dokumenpub/assets/img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://dokumen.pub/dokumenpub/assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://dokumen.pub/dokumenpub/assets/img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://dokumen.pub/dokumenpub/assets/img/favicon-16x16.png">
+	<link rel="manifest" href="https://dokumen.pub/dokumenpub/assets/img/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="https://dokumen.pub/dokumenpub/assets/img/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+	<link href='https://dokumen.pub/dokumenpub/assets/bootstrap.min.css' rel='stylesheet' type='text/css'>
+	<link href='https://dokumen.pub/dokumenpub/assets/css/bootstrap-social.css' rel='stylesheet' type='text/css'>
+        <link href='https://dokumen.pub/dokumenpub/assets/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<link href='https://dokumen.pub/dokumenpub/assets/min.css' rel='stylesheet' type='text/css'>
+
+	<script src="https://dokumen.pub/dokumenpub/assets/popper.min.js"></script>
+        <script src="https://dokumen.pub/dokumenpub/assets/js/jquery-3.2.1.min.js"></script>
+        <script src="https://dokumen.pub/dokumenpub/assets/bootstrap.min.js"></script>
+	<style>
+	    .mh-logo {
+		max-height: 32px;
+	    }
+	    .dropdown-menu.show {
+		display: inline-table !important;
+	    }
+	    .carousel-caption {
+		background: #007bff69!important;
+		background-image: initial !important;
+		background-position-x: initial !important;
+		background-position-y: initial !important;
+		background-size: initial !important;
+		background-repeat-x: initial !important;
+		background-repeat-y: initial !important;
+		background-attachment: initial !important;
+		background-origin: initial !important;
+		background-clip: initial !important;
+		background-color: rgba(0, 123, 255, 0.41) !important;
+	    }
+	    #myBtnGoToTop {
+		display: none; /* Hidden by default */
+		position: fixed; /* Fixed/sticky position */
+		bottom: 60px; /* Place the button at the bottom of the page */
+		right: 15px; /* Place the button 30px from the right */
+		z-index: 999; /* Make sure it does not overlap */
+	    }
+	    .bg-red {
+		background: #dc143c !important;
+	    }
+	</style>
+	    </head>
+    <body>
+	<!-- BEGIN HEADER -->
+	<header id="header" class="container-fluid p-0">
+	    <div id="top-bar" class="row bg-red m-0">
+		<div class="col-12">
+		    <ul id="top-buttons">
+						    <li><a class="text-white" href="https://dokumen.pub/login"><i class="fa fa-sign-in mr-1"></i>Anmelden</a></li>
+			    <li><a class="text-white" href="https://dokumen.pub/register"><i class="fa fa-pencil-square-o mr-1"></i>Registrierung</a></li>
+						<li>
+			    <div class="language-switcher dropdown">
+				<span class="dropdown-toggle text-white" id="dropdownlang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe mr-1"></i>Deutsch</span>
+				<ul class="dropdown-menu p-0" aria-labelledby="dropdownlang">
+				    <li class="dropdown-item small"><a href="#English">English</a></li>
+				    <li class="dropdown-item small"><a href="#Español">Español</a></li>
+				    <li class="dropdown-item small"><a href="#Português">Português</a></li>
+				    <li class="dropdown-item small"><a href="#Français">Français</a></li>
+				</ul>
+			    </div>
+			</li>
+		    </ul>
+		</div>
+	    </div>
+	    <nav class="navbar navbar-expand-md px-1 m-0">
+		<div class="container-fluid">
+		    <a class="navbar-brand mx-0 order-1" href="https://dokumen.pub/">
+			<img src="https://dokumen.pub/dokumenpub/assets/img/dokumenpub_logo.png" class="mh-logo" alt="dokumen.pub" />
+		    </a>
+		    <button class="navbar-toggler border rounded bg-white order-0" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navigation-index" aria-expanded="false">
+			<i class="fa fa-bars text-primary" aria-hidden="true"></i>
+		    </button>
+		    <div class="collapse navbar-collapse justify-content-center small order-2" id="navbarContent">
+			<ul class="navbar-nav">
+			    <li class="nav-item px-2">
+				<a class="nav-link text-primary" href="https://dokumen.pub/">
+				    <i class="fa fa-home mr-1"></i>Dom				</a>
+			    </li>
+			    <li class="nav-item px-2 dropdown">
+				<a class="nav-link text-primary dropdown-toggle" id="dropdowncategories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#Categories">
+				    <i class="fa fa-list-alt mr-1"></i>Najlepsze kategorie				</a>
+				<ul class="dropdown-menu p-0" aria-labelledby="dropdowncategories">
+				    				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/career-money">CAREER & MONEY</a>
+				    </li>
+				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/personal-growth">PERSONAL GROWTH</a>
+				    </li>
+				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/politics-current-affairs">POLITICS & CURRENT AFFAIRS</a>
+				    </li>
+				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/science-tech">SCIENCE & TECH</a>
+				    </li>
+				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/health-fitness">HEALTH & FITNESS</a>
+				    </li>
+				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/lifestyle">LIFESTYLE</a>
+				    </li>
+				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/entertainment">ENTERTAINMENT</a>
+				    </li>
+				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/biographies-history">BIOGRAPHIES & HISTORY</a>
+				    </li>
+				    				    <li class="dropdown-item small">
+					<a href="https://dokumen.pub/category/fiction">FICTION</a>
+				    </li>
+				    				</ul>
+			    </li>
+			    <li class="nav-item px-2">
+				<a class="nav-link text-primary" href="https://dokumen.pub/top-stories">
+				    <i class="fa fa-paper-plane mr-1"></i>Najlepsze historie				</a>
+			    </li>
+			    <li class="nav-item px-2">
+				<a class="nav-link text-primary" href="https://dokumen.pub/best-stories">
+				    <i class="fa fa-paper-plane-o mr-1"></i>Najlepsze historie				</a>
+			    </li>
+			    <li class="nav-item px-2">
+				<a class="nav-link text-primary" href="https://dokumen.pub/upload-document">
+				    <i class="fa fa-cloud-upload mr-1"></i>Dodaj historię				</a>
+			    </li>
+			    <li class="nav-item px-2">
+				<a class="nav-link text-primary" href="https://dokumen.pub/manage-documents">
+				    <i class="fa fa-file mr-1"></i>Moje historie				</a>
+			    </li>
+			</ul>
+		    </div>
+		</div>
+	    </nav>
+	</header>
+	<!-- END HEADER -->
+	<div class="container-fluid">
+    <div class="row">
+	<div class="col-12 my-2">
+	    	    <nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a href="https://dokumen.pub/"><small>Home</small></a></li>
+		    						    			    <li class="breadcrumb-item active" aria-current="page"><small>Every layout relearn CSS layout by example [2&nbsp;ed.]</small></li>
+			    					    		</ol>
+	    </nav>
+	</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row my-3">
+	<div class="col-12 text-center">
+	    	</div>
+        <div class="col-lg-5 col-md-5 col-12">
+	    <h1><small>Every layout relearn CSS layout by example [2&nbsp;ed.]</small></h1>
+	    <p><small></small></p>
+	    <p class="d-block small">
+		<span class="mr-2"><em><i class="fa fa-eye mr-1"></i>11,230</em></span>
+		<span class="mr-2"><em><i class="fa fa-download mr-1"></i>1,568</em></span>
+				<span class="mr-2"><em><i class="fa fa-file-o mr-1"></i>37MB</em></span>
+			    </p>
+	    <p class="d-block small">
+				<span class="mr-2"><em><i class="fa fa-language mr-1"></i>English</em></span>
+						<span class="mr-2"><em>Pages [262]</em></span>
+						<span class="mr-2"><em>Year 2021</em></span>
+			    </p>
+	    <p class="d-block small">
+		<a href="#" data-toggle="modal" data-target="#report" class="text-danger"><em><i class="fa fa-flag-checkered mr-1"></i>Report DMCA / Copyright</em></a>
+	    </p>
+	    <p>
+		<a href="https://dokumen.pub/download/every-layout-relearn-css-layout-by-example-2nbsped.html" class="btn btn-primary btn-block"><i class="fa fa-cloud-download mr-1"></i>DOWNLOAD FILE</a>
+	    </p>
+	    	    		<p>
+		    <iframe id="pdfviewer" src="https://dokumen.pub/pdfviewer/web/viewer.html?file=https%3A%2F%2Fdokumen.pub%2Fdokumenpub%2Fassets%2Fpdf%2Fmin.pdf#zoom=page-fit" width="100%" height="360" class="d-none d-md-block d-lg-block w-100"></iframe>
+		</p>
+	    	    		<h5 class="d-none d-md-block"><strong>Polecaj historie</strong></h5>
+		<hr class="d-none d-md-block" />
+		<div class="row d-none d-md-block">
+		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/grid-layout-in-css.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/grid-layout-in-css.jpg" alt="Grid Layout in CSS" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">Grid Layout in CSS</h6>
+		<p class="d-block text-justify text-dark">
+		    CSS has had a layout-shaped hole at its center since the beginning. Designers have bent features such as float and clear		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 1,900</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 351</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 6MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/css-grid-layout-5-practical-projects.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/css-grid-layout-5-practical-projects.jpg" alt="CSS grid layout 5 practical projects" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">CSS grid layout 5 practical projects</h6>
+		<p class="d-block text-justify text-dark">
+		    		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 2,447</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 405</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 1MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/fundamental-checkmates-print-layout-print-layoutnbsped-1910093807-9781910093801.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/fundamental-checkmates-print-layout-print-layoutnbsped-1910093807-9781910093801.jpg" alt="Fundamental Checkmates [(print layout), print layout&nbsp;ed.]
+ 1910093807, 9781910093801" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">Fundamental Checkmates [(print layout), print layout&nbsp;ed.]
+ 1910093807, 9781910093801</h6>
+		<p class="d-block text-justify text-dark">
+		    		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 1,136</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 132</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 33MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/css-3-grid-layout-vous-allez-enfin-aimer-css-1nbsped-2212676832-9782212676839.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/css-3-grid-layout-vous-allez-enfin-aimer-css-1nbsped-2212676832-9782212676839.jpg" alt="CSS 3 Grid Layout: Vous allez enfin aimer CSS [1&nbsp;ed.]
+ 2212676832, 9782212676839" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">CSS 3 Grid Layout: Vous allez enfin aimer CSS [1&nbsp;ed.]
+ 2212676832, 9782212676839</h6>
+		<p class="d-block text-justify text-dark">
+		    Un ouvrage de référence pour les webdesigners et intégrateurs Complémentaire de Flexbox, le module de positionnement Gri		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 1,296</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 145</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 7MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/basic-visual-formatting-in-css-layout-fundamentals-in-css-9781491929919-149192991x.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/basic-visual-formatting-in-css-layout-fundamentals-in-css-9781491929919-149192991x.jpg" alt="Basic Visual Formatting in CSS: Layout Fundamentals in CSS
+ 9781491929919, 149192991X" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">Basic Visual Formatting in CSS: Layout Fundamentals in CSS
+ 9781491929919, 149192991X</h6>
+		<p class="d-block text-justify text-dark">
+		    Some aspects of the CSS formatting model may seem counterintuitive at first, but as you’ll learn in this practical guide		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 1,130</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 105</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 2MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/designing-with-css-grid-layout-9781492023425-1492023426-9781492023418-1492023418-9781492023432-1492023434-9781492023531-1492023531.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/designing-with-css-grid-layout-9781492023425-1492023426-9781492023418-1492023418-9781492023432-1492023434-9781492023531-1492023531.jpg" alt="Designing with CSS grid layout
+ 9781492023425, 1492023426, 9781492023418, 1492023418, 9781492023432, 1492023434, 9781492023531, 1492023531" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">Designing with CSS grid layout
+ 9781492023425, 1492023426, 9781492023418, 1492023418, 9781492023432, 1492023434, 9781492023531, 1492023531</h6>
+		<p class="d-block text-justify text-dark">
+		    Layout in CSS has always been a tricky task: hacking solutions using positioning, floats, and the one-dimensional flexbo		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 887</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 194</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 2MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/webseiten-layout-mit-css-der-perfekte-einstieg-in-cascading-style-sheets-9783645220392.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/webseiten-layout-mit-css-der-perfekte-einstieg-in-cascading-style-sheets-9783645220392.jpg" alt="Webseiten-Layout mit CSS: Der perfekte Einstieg in Cascading Style Sheets
+ 9783645220392" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">Webseiten-Layout mit CSS: Der perfekte Einstieg in Cascading Style Sheets
+ 9783645220392</h6>
+		<p class="d-block text-justify text-dark">
+		    Keine Angst vor CSS! Auch in Zeiten von Joomla! und WordPress sorgen Cascading Style Sheets für unverwechselbares Websei		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 242</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 129</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 15MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/cryptocurrency-tracking-guide-book-layout.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/cryptocurrency-tracking-guide-book-layout.jpg" alt="Cryptocurrency Tracking Guide Book Layout" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">Cryptocurrency Tracking Guide Book Layout</h6>
+		<p class="d-block text-justify text-dark">
+		    		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 131</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 28</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 194KB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/algorithmic-aspects-of-vllsi-layout-9789810214883-981021488x.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/algorithmic-aspects-of-vllsi-layout-9789810214883-981021488x.jpg" alt="Algorithmic Aspects of VlLSI Layout
+ 9789810214883, 981021488X" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">Algorithmic Aspects of VlLSI Layout
+ 9789810214883, 981021488X</h6>
+		<p class="d-block text-justify text-dark">
+		    Discussing algorithmic aspects of VLSI layout, this text includes coverage of: issues in timing driven layout; LP formul		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 572</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 72</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 4MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    			<div class="col-12 col-md-12 col-lg-12 my-2">
+    <a href="https://dokumen.pub/html-und-css-semantik-design-responsive-layout-2nbsped-9783662666623-9783662666630.html" class="d-block shadow p-3">
+	<div class="row">
+	    <div class="col-4 col-md-3 col-lg-3">
+		<div class="ecover"><img class="w-100 d-block" src="https://dokumen.pub/img/200x200/html-und-css-semantik-design-responsive-layout-2nbsped-9783662666623-9783662666630.jpg" alt="HTML und CSS: Semantik – Design – Responsive Layout [2&nbsp;ed.]
+ 9783662666623, 9783662666630" /></div>
+	    </div>
+	    <div class="col-8 col-md-9 col-lg-9">
+		<h6 class="text-primary">HTML und CSS: Semantik – Design – Responsive Layout [2&nbsp;ed.]
+ 9783662666623, 9783662666630</h6>
+		<p class="d-block text-justify text-dark">
+		    		</p>
+		<p class="d-block">
+		    <small>
+		    <span class="pull-left mr-2"><em><i class="fa fa-eye"></i> 286</em></span>
+		    <span class="pull-left mr-2"><em><i class="fa fa-download"></i> 74</em></span>
+		    		    <span class="pull-left"><em><i class="fa fa-file-o"></i> 5MB</em></span>
+		    		    </small>
+		    <span class="clearfix btn btn-primary pull-right d-none d-md-block">Read more</span>
+		</p>
+	    </div>
+	</div>
+    </a>
+</div>		    		</div>
+	            </div>
+	<div class="col-lg-2 col-md-2 col-12 mb-3">
+	    <p class="ecover d-none d-md-inline-block my-3"><img width="200" src="https://dokumen.pub/img/200x200/every-layout-relearn-css-layout-by-example-2nbsped.jpg" alt="Every layout relearn CSS layout by example [2&nbsp;ed.]" /></p>
+	    		<ul class="list-group my-3">
+		    <li class="list-group-item small"><i class="fa fa-user-circle-o mr-1"></i>Author / Uploaded</li>
+		    		    <li class="list-group-item small">
+			<a href="#Heydon+Pickering">Heydon Pickering</a>
+		    </li>
+		    		    <li class="list-group-item small">
+			<a href="#Andy+Bell">Andy Bell</a>
+		    </li>
+		    		</ul>
+	    	    	    <p class="my-3">
+		<!-- Facebook -->
+		<a href="https://www.facebook.com/sharer.php?u=https://dokumen.pub/every-layout-relearn-css-layout-by-example-2nbsped.html" target="_blank" class="btn btn-social-icon btn-facebook">
+		    <i class="fa fa-facebook"></i>
+		</a>
+		<!-- Twitter -->
+		<a href="https://twitter.com/intent/tweet?url=https://dokumen.pub/every-layout-relearn-css-layout-by-example-2nbsped.html" target="_blank" class="btn btn-social-icon btn-twitter">
+		    <i class="fa fa-twitter"></i>
+		</a>
+	    </p>
+	    <div class="fb-like" data-href="https://dokumen.pub/every-layout-relearn-css-layout-by-example-2nbsped.html" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+	    <div id="fb-root"></div>
+	    <script>
+		(function (d, s, id) {
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id))
+			return;
+		    js = d.createElement(s);
+		    js.id = id;
+		    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9&appId=2286382284800375";
+		    fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	    </script>
+	    <div class="fb-comments my-3 d-block" data-href="https://dokumen.pub/every-layout-relearn-css-layout-by-example-2nbsped.html" data-width="100%" data-numposts="6"></div>
+	    	</div>
+	<div class="col-lg-5 col-md-5 col-12 overflow-auto">
+	    	    <p><em>Table of contents : <br/>Preface<br/>Rudiments<br/>Layouts<br/>Boxes<br/>Composition<br/>Units<br/>Global and local styling<br/>Modular scale<br/>Axioms<br/>The Stack<br/>The Box<br/>The Center<br/>The Cluster<br/>The Sidebar<br/>The Switcher<br/>The Cover<br/>The Grid<br/>The Frame<br/>The Reel<br/>The Imposter<br/>The Icon</em></p>
+	    	    		<h5><strong>Citation preview</strong></h5>
+		<hr />
+		<p class="d-block text-justify">Preface<br /> <br /> ↗<br /> <br /> This is the ebook version of every-layout.dev and contains all of the same content. We made it for you because we thought you might like to read about CSS layout in this format, and oﬄine. An EPUB book cannot do or show all the things a website can, and the interactive demos are replaced with links back to the everylayout.dev website. To see all of these pages and demos, you have to purchase the full version of Every Layout. If you are looking at this book, you have hopefully done that already. After purchase, a link to the full, unlocked site will accompany the link to this book in an email.<br /> <br /> ↗<br /> <br /> ↗<br /> <br /> All external links in this book are marked with a symbol/character. If you see a link not suﬃxed with , it points to a section within the book itself. The book has been tested to render and behave as expected in the latest versions of Apple’s iBooks, and the Calibre ebook manager .<br /> <br /> ↗<br /> <br /> ↗<br /> <br /> Second edition!<br /> <br /> In fact, this is the SECOND EDITION of Every Layout, completed some time in June 2021. This edition converts a number of layouts to use the gap property which has come to be widely supported with Flexbox as well as Grid. Using gap simpliﬁes many layouts and makes them easier to understand.<br /> <br /> Ownership When you purchase a licence for Every Layout, you own a licence to the content that is authored and owned by Heydon Pickering and Andy Bell.<br /> <br /> Fair usage and redistribution Re-publishing and re-selling of Every Layout is strictly forbidden and discovered instances will be pursued, legally, in accordance with United Kingdom copyright law. We expect licence holders to use their licence in a fair manner. We put a lot of trust in our licence holders so that we can make using Every Layout as frictionless as possible. We believe that you, the licence holder, should be able to access the content that you paid for with little to no barriers, but this also means that the licence is easily shared. If we suspect you are not using your license in a fair manner or sharing it irresponsibly, we reserve the right to revoke your access to Every Layout with no refunds, after a fair warning.<br /> <br /> RUDIMENTS Boxes Composition Units Global and local styling Modular scale Axioms<br /> <br /> LAYOUTS The Stack<br /> <br /> The Box<br /> <br /> The Center<br /> <br /> The Cluster<br /> <br /> The Sidebar<br /> <br /> The Switcher<br /> <br /> The Cover<br /> <br /> The Grid<br /> <br /> The Frame<br /> <br /> The Reel<br /> <br /> The Imposter<br /> <br /> The Icon<br /> <br /> Boxes As Rachel Andrew has reminded us, everything in web design is a box , or the absence of a box. Not everything necessarily looks like a box—border-radius, clip-path, and transforms can be deceptive, but everything takes up a box-like space. Layout is inevitably, therefore, the arrangement of boxes.<br /> <br /> ↗<br /> <br /> Before one can embark on combining boxes to make composite layouts, it is important to be familiar with how boxes themselves are designed to behave as standard.<br /> <br /> The box model<br /> <br /> ↗<br /> <br /> The box model is the formula upon which layout boxes are based, and comprises content, padding, border, and margin. CSS lets us alter these values to change the overall size and shape of elements’ display.<br /> <br /> Web browsers helpfully apply default CSS styles to some elements, meaning they are laid out in a reasonably readable fashion: even where author CSS has not been applied. In Chrome, the default user agent styles for paragraphs (<p>) look like…<br /> <br /> p { display: block; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; }<br /> <br /> … and unordered list (<ul>) styles look like…<br /> <br /> ul { display: block; list-style-type: disc; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; padding-inline-start: 40px; }<br /> <br /> The display property In both the above examples, the element's display property is set to block. Block elements assume all of the available space in one dimension. Typically, this is the horizontal dimension, because the writing-mode is set to horizontal-tb (horizontal; with a top to bottom ﬂow direction). In some cases, and for some languages (like Mongolian ), vertical-lr is the appropriate writing mode.<br /> <br /> ↗<br /> <br /> Inline elements (with the display value inline) behave diﬀerently. They are laid out in line with the current context, writing mode, and<br /> <br /> direction. They are only as wide as their content, and are placed adjacently wherever there is space to do so. Block elements follow 'ﬂow direction', and inline elements follow writing direction.<br /> <br /> Thinking typographically, it could be said that block elements are like paragraphs, and inline elements are like words.<br /> <br /> ↗<br /> <br /> Block elements (also called block-level elements) aﬀord you control over both the horizontal and vertical dimensions of the box. That is, you can apply width, height, margin, and padding to a block element and it will take eﬀect. On the other hand, inline elements are sized intrinsically (prescribed width and height values do not take eﬀect) and only horizontal margin and padding values are permitted. Inline elements are designed to conform to the ﬂow of horizontal placement among other inline elements.<br /> <br /> A relatively new display property, inline-block, is a hybrid of block and inline. You can set vertical properties on inline-block elements, although this is not always desirable—as the proceeding illustration demonstrates.<br /> <br /> Of the basic display types, only none remains. This value removes the element from the layout entirely. It has no visual presence, and no impact on the layout of surrounding elements. It is as if the element itself has been removed from the HTML. Accordingly, browsers do not communicate the presence or content of display: none elements to assistive technologies like screen reader software .<br /> <br /> ↗<br /> <br /> Formatting contexts When you apply display: flex or display: grid to a , it continues to behave like a block element, using display: block. However, it changes the way its child elements behave. For example, with just display: flex (and no other Flexbox-related<br /> <br /> properties) applied to the parent, its children will distribute themselves horizontally. Or, to put it another way, the ﬂow direction is switched from vertical to horizontal. Formatting contexts are the basis of many of the layouts documented in this project. They turn elements into layout components. In Composition, we'll explore how diﬀerent formatting contexts can be nested, to create composite layouts.<br /> <br /> Content in boxes The web is a conduit for primarily textual information supplemented by media such as images and videos, often referred to collectively as content. Browsers incorporate line wrapping and scrolling algorithms to make sure content is transmitted to the user in its entirety, irrespective of their screen sizes and dimensions, and settings such as zoom level. The web is responsive largely by default.<br /> <br /> ↗<br /> <br /> Without intervention, it is the contents of an element that determines its size and shape. Content makes inline elements grow horizontally, and block elements grow vertically. Left to its own devices, the area of a box is determined by the area of the content it contains. Because web content is dynamic (subject to change), static representations of web layouts are extremely misleading. Working directly with CSS and its ﬂexibility from the outset, as we are here, is highly recommended.<br /> <br /> If you halve the width of an element, it will have to be twice as tall to contain the same amount of content<br /> <br /> The box-sizing property By default, the dimensions of a box are the dimensions of the box’s content plus its padding and border values (implicitly: box-sizing: content-box). That is, if you set an element to be 10rem wide, then add padding on both sides of 1rem, it will be 12rem wide: 10rem plus 1rem of left padding and 1rem of right padding. If you opt for boxsizing: border-box, the content area is reduced to accommodate the padding and the total width equals the prescribed width of 10rem.<br /> <br /> Generally, it is considered preferable to use the border-box model for all boxes. It makes calculating/anticipating box dimensions easier. Any styles, like box-sizing: border-box, that are applicable to all elements are best applied using the * (“universal” or “wildcard”) selector. As covered in detail in Global and local styling, being able to aﬀect the layout of multiple elements (in this case, all elements) simultaneously is how CSS brings eﬃciency to layout design.<br /> <br /> * { box-sizing: border-box; }<br /> <br /> Exceptions There are exceptions to the border-box rule-of-thumb, such as in the Center layout where measurement of the content is critical. CSS's cascade is designed to accommodate exceptions to general rules.<br /> <br /> ↗<br /> <br /> * { box-sizing: border-box; } center-l { box-sizing: content-box; }<br /> <br /> Only where the height or width of a box is constrained does the diﬀerence between content-box and border-box come into play. For illustration, consider a block element placed inside another block element. Using the content-box model and a padding of 1rem, the child element will overﬂow by 2rem when width: 100% is applied.<br /> <br /> Why? Because width: 100% means “make the width of this element the same as the parent element”. Since we are using the content-box model, the content is made 100% wide, then the padding is added on to this value. But if we use width: auto (we can just remove width: 100%, since auto is the default value) the child box ﬁts within the parent box perfectly. And that’s regardless of the box-sizing value.<br /> <br /> Implicitly, the height is also set to auto, meaning it is derived from the content. Again, box-sizing has no eﬀect. The lesson here is the dimensions of our elements should be largely derived from their inner content and outer context. When we try to prescribe dimensions, things tend to go amiss. All we should be doing as visual designers is making suggestions as to how the layout should take shape. We might, for instance, apply a min-height (as in the Cover layout) or proﬀer a flex-basis (as in the Sidebar). The CSS of suggestion is at the heart of algorithmic layout design. Instead of telling browsers what to do, we allow browsers to make their own calculations, and draw their own conclusions, to best suit the user, their screen, and device. Nobody should experience obscured content under any circumstances.<br /> <br /> Composition If you are a programmer, you may have heard of the composition over inheritance principle. The idea is that combining simple independent parts (objects; classes; functions) gives you more ﬂexibility, and leads to more eﬃciency, than connecting everything— through inheritance—to a shared origin.<br /> <br /> ↗<br /> <br /> Composition over inheritance does not have to apply to “business logic”. It is also beneﬁcial to favor composition in front-end architecture and visual design (the React documentation even has a dedicated page about it ).<br /> <br /> ↗<br /> <br /> Composition and layout To understand how composition beneﬁts a layout system, let’s consider an example component. Let’s say that this component is a dialog box, because the interface (for reasons we won’t get into right now) requires a dialog box. Here is what it looks like:<br /> <br /> But how does it get to look like that? One way is to write some dedicated dialog CSS. You might give the dialog box a “block” identiﬁer (.dialog in CSS, and class="dialog" in HTML) and use this as your namespace to attach style declarations.<br /> <br /> .dialog { /* ... */ } .dialog__header { /* ... */ } .dialog__body { /* ... */ } .dialog__foot { /* ... */ }<br /> <br /> Alternatively, these dialog styles might be imported from a thirdparty CSS library/framework. In either case, a lot of the CSS used to make the dialog look like a dialog, could be used to make other, similar layouts. But since everything here is namespaced under .dialog, when we come to make the next component, we’ll end up duplicating would-be shared styles. This is where most CSS bloat comes from. The namespacing part is key here. The inheritance mindset encourages us to think about what ﬁnalized parts of UI should be called before we’ve even decided what they do, or what other, smaller parts can do for them. That’s where composition comes in.<br /> <br /> Layout primitives The mistake in the last example was to think of everything about the dialog’s form as isolated and unique when, really, it's just a composition of simpler layouts. The purpose of Every Layout is to identify and document what each of these smaller layouts are. Together, we call them primitives. The term primitive has linguistic, mathematical, and computing connotations. In each case, a primitive is something without its own meaning or purpose as such, but which can be used in composition to make something meaningful, or lexical. In language it might be a word or phrase, in mathematics an equation, in design a pattern, or in development a component. In JavaScript, the Boolean data type is a primitive. Just looking at the value true (or false) out of context tells you very little about the<br /> <br /> larger JavaScript application. The object data type, on the other hand, is not primitive. You cannot write an object without designating your own properties. Objects are therefore meaningful; they necessarily tell you something of the author’s intent. The dialog is meaningful, as a piece of UI, but its constituent parts are not. Here’s how we might compose the dialog box using Every Layout’s layout primitives:<br /> <br /> Using many of the same primitives, we can create a registration form…<br /> <br /> … or a slide layout for a conference talk:<br /> <br /> Intrinsically responsive<br /> <br /> Each layout in Every Layout is intrinsically responsive. That is, it will wrap and reconﬁgure internally to make sure the content is visible (and well-spaced) to ﬁt any context/screen. You may feel compelled to add @media query breakpoints, but these are considered “manual overrides” and Every Layout primitives do not depend on them. Without primitive data types, you would have to be constantly teaching your programming language how to do basic operations. You would quickly lose sight of the speciﬁc, meaningful task you set out to accomplish with the language in the ﬁrst place. A design system that does not leverage primitives is similarly problematic. If every component in your pattern library follows its own rules for layout, ineﬃciencies and inconsistencies will abound. The primitives each have a simple responsibility: "space elements vertically", "pad elements evenly", "separate elements horizontally", etc. They are designed to be used in composition, as parents, children, or siblings of one another. You probably cannot create literally every layout using Every Layout's primitives alone. But you can certainly make most, if not all, common web layouts, and achieve many of your own unique conceptions. In any case, you should walk away with an understanding and appreciation for the beneﬁts of composition, and the power to create all sorts of interfaces with just a little reusable code. The English alphabet is only 26 bytes, and think of all the great works created with that!<br /> <br /> Units Everything you see on the web is composed out of the little dots of light that make up your device’s screen: pixels. So, when measuring out the artefacts that make up our interfaces, thinking in terms of pixels, and using the CSS px unit, makes sense. Or does it?<br /> <br /> ↗<br /> <br /> Screens’ pixel geometries vary wildly , and most modern displays employ sub-pixel rendering, which is the manipulation of the color components of individual pixels, to smooth jagged edges and produce a higher perceived resolution. The notion of 1px is fuzzier than how it’s often portrayed.<br /> <br /> The Samsung Galaxy Tab S 10.5 alternates the arrangement of subpixels between pixels. Every other pixel is composed diﬀerently.<br /> <br /> Screen resolutions—how many pixels screens pack—also diﬀer. Consequently, while one “CSS pixel” (1px in CSS) may approximate one “device” or “hardware” pixel on a lower resolution screen, a high resolution screen may proﬀer multiple device pixels for each 1px of CSS. So there are pixels, and then there are pixels of pixels.<br /> <br /> Suﬃce it to say that, while screens are indeed made up of pixels, pixels are not regular, immutable, or constant. A 400px box viewed by a user browsing zoomed in is simply not 400px in CSS pixels. It may not have been 400px in device pixels even before they activated zoom. Working with the px unit in CSS is not incorrect as such; you won’t see any error messages. But it encourages us to labour under a false premise: that pixel perfection is both attainable and desirable.<br /> <br /> ↗<br /> <br /> Scaling and accessibility Designing using the px unit doesn’t only encourage us to adopt the wrong mindset: there are manifest limitations as well. For one, when you set your fonts using px, browsers assume you want to ﬁx the fonts at that size. Accordingly, the font size chosen by the user in their browser settings is disregarded.<br /> <br /> ↗<br /> <br /> With modern browsers now supporting full page zoom (where everything, including text is zoomed proportionately), this is often blown oﬀ as a solved problem. However, as Evan Minto discovered , there are more users who adjust their default font size in browser settings than there are users of the browsers Edge or Internet Explorer. That is: disregarding users who adjust their default font size is as impactful as disregarding whole browsers.<br /> <br /> ↗<br /> <br /> The units em, rem, ch, and ex present no such problem because they are all units relative to the user’s default font size, as set in their operating system and/or browser. Browsers translate values using these units into pixels, of course, but in such a way that’s sensitive to context and conﬁguration. Relative units are arbitrators.<br /> <br /> Relativity Browsers and operating systems typically only aﬀord users the ability to adapt the base or body font size. This can be expressed as 1rem: exactly one times the root font size. Your paragraph elements<br /> <br /> should always be 1rem, because they represent body text. You don’t need to set 1rem explicitly, because it’s the default value.<br /> <br /> :root { /* ↓ redundant */ font-size: 1rem; } p { /* ↓ also redundant */ font-size: 1rem; }<br /> <br /> Elements, like headings, should be set relatively larger — otherwise hierarchy will be lost. My might be 2.5rem, for example.<br /> <br /> h2 { /* ↓ 2.5 × the root font-size */ font-size: 2.5rem; }<br /> <br /> While the units em, rem, ch, and ex are all measurements of text, they can of course be applied to the margin, padding, and border properties (among others). It’s just that text is the basis of the web medium, and these units are a convenient and constant reminder of this fact. Learn to extrapolate your layouts from your text’s intrinsic dimensions and your designs will be beautiful.<br /> <br /> ⚠  Needless conversion<br /> <br /> A lot of folks busy themselves converting between rem and px, making sure each rem value they use equates to a whole pixel value. For example, if the base size is 16px, 2.4375rem would be 39px, but 2.43rem would be 38.88px. There’s no need to do precise conversion, since browsers employ sub-pixel rendering and/or rounding to even things out automatically. It’s less verbose to use simple fractions like 1.25rem, 1.5rem, 1.75rem, etc — or to let calc() do the heavy lifting in your Modular scale.<br /> <br /> Proportionality and maintainability My is 2.5 times the root/base size. If I enlarge the root size, my —and all the other dimensions set in rem-based multiples—will by enlarged proportionately. The upshot is that scaling the entire interface is trivial:<br /> <br /> @media (min-width: 960px) { :root { /* ↓ Upscale by 25% at 960px */ font-size: 125%; } }<br /> <br /> If I had instead adopted px, the implications for maintenance would be clear: the lack of relative and proportional sizing would require adjusting individual elements case-by-case.<br /> <br /> h3 { font-size: 32px; } h2 { font-size: 40px; } @media (min-width: 960px) { h3 { font-size: 40px; } h2 { font-size: 48px; } /* etc etc ad nauseum */ }<br /> <br /> Viewport units In Every Layout, we eschew width-based @media queries. They represent the hard coding of layout reconﬁgurations, and are not sensitive to the immediate available space actually aﬀorded the element or component in question. Scaling the interface at a discrete breakpoint, as in the last example, is arbitrary. What’s so special about 960px? Can we really say the smaller size is acceptable at 959px?<br /> <br /> A 1px disparity represents a signiﬁcant jump when using a breakpoint.<br /> <br /> ↗<br /> <br /> Viewport units are relative to the browser viewport’s size. For example, 1vw is equal to 1% of the screen’s width, and 1vh is equal to 1% of the screen’s height. Using viewport units and calc() we can create an algorithm whereby dimensions are scaled proportionately, but from a minimum value.<br /> <br /> :root { font-size: calc(1rem + 0.5vw); }<br /> <br /> The 1rem part of the equation ensures the font-size never drops below the default (system/browser/user deﬁned) value. That is, 1rem + 0vw is 1rem.<br /> <br /> The em unit<br /> <br /> ↗<br /> <br /> The em unit is to the rem unit what a container query is to a @media query. It pertains to the immediate context rather than the outer document. If I wanted to slightly enlarge a <strong> element’s fontsize within my , I could use em units:<br /> <br /> h2 { font-size: 2.5rem; } h2 strong { font-size: 1.125em; }<br /> <br /> The <strong>’s font-size is now 1.125 × 2.5rem, or 2.53125rem. If I set a rem value for the <strong> instead, it wouldn’t scale with its parent : if I changed the h2 value, I would have to change the h2 strong CSS value as well. As a rule of thumb, em units are better for sizing inline elements, and rem units are better for block elements. SVG icons are perfect candidates for em-based sizing, since they either accompany or supplant text.<br /> <br /> ↗<br /> <br /> The actual value, in ems, of the icon height/width must be adapted to the accompanying font’s own metrics, in some cases. The Barlow Condensed font used on this site has a lot<br /> <br /> of internal space to compensate for — hence the 0.75rem value.<br /> <br /> The ch and ex units The ch and ex units pertain to the (approximate) width and height of one character respectively. 1ch is based on the width of a 0, and 1ex is equal to the height of your font’s x character—also known as the x height or corpus size .<br /> <br /> ↗<br /> <br /> In the Axioms section, the ch unit is used to restrict elements’ measure for readability. Since measure is a question of characters per line, ch (short for character) is the only appropriate unit for this styling task.<br /> <br /> ↗<br /> <br /> An and an can have diﬀerent font-size values, but the same (maximum) measure.<br /> <br /> h2, h3 { max-width: 60ch; } h3 { font-size: 2rem; } h2 { font-size: 2.5rem; }<br /> <br /> The width, in pixels, of one full line of text is extrapolated from the relationship between the rem-based font-size and ch-based maxwidth. By delegating an algorithm to determine this value—rather than hard coding it as a px-based width—we avoid frequent and serious error. In CSS layout terms, an error is malformed or obscured content: data loss for human beings.<br /> <br /> Global and local styling In the Composition section we covered how small, nonlexical components for layout can be used to create larger composites, but not all styles within an eﬃcient and consistent CSS-based design system should be strictly component based. This section will contextualize layout components in a larger system that includes global styles.<br /> <br /> What are global styles? When people talk about the global nature of CSS, they can mean one of a few diﬀerent things. They may be referring to rules on the :root or elements that are inherited globally (with just a few exceptions).<br /> <br /> :root { /* ↓ Now (almost) all elements display a sans-serif font */ font-family: sans-serif; }<br /> <br /> Alternatively, they may mean using the unqualiﬁed * selector style all elements directly.<br /> <br /> ↗ to<br /> <br /> * { /* ↓ Now literally all elements display a sans-serif font */ font-family: sans-serif; }<br /> <br /> Element selectors are more speciﬁc, and only target the elements they name. But they are still “global” because they can reach those elements wherever they are situated.<br /> <br /> p { /* ↓ Wherever you put a paragraph, it’ll be sans-serif */ font-family: sans-serif; }<br /> <br /> A liberal use of element selectors is the hallmark of a comprehensive design system. Element selectors take care of generic atoms such as headings, paragraphs, links, and buttons. Unlike when using classes (see below), element selectors can target the arbitrary, unattributed content produced by WYSIWYG editors and markdown .<br /> <br /> ↗<br /> <br /> ↗<br /> <br /> ↗<br /> <br /> The layouts of Every Layout do not explore or prescribe styles for simple elements; that is for you to decide. It is the imbrication of simple elements into composite layouts that we are interested in here.<br /> <br /> Each layout requires a container element which establishes a formatting context for its children. Simple elements, without children for which they establish a context, can be thought of as 'end nodes' in the layout hierarchy.<br /> <br /> Finally, class-based styles, once deﬁned, can be adhered to any HTML element, anywhere in a document. These are more portable and composable than element styles, but require the author to aﬀect the markup directly.<br /> <br /> .sans-serif { font-family: sans-serif; }<br /> <br /> ... ... ...<br /> <br /> It should be appreciated how important it is to leverage the global reach of CSS rules. CSS itself exists to enable the styling of HTML globally, and by category, rather than element-by-element. When used as intended, it is the most eﬃcient way to create any kind of layout or aesthetic on the web. Where global styling techniques (such as the ones above) are used appropriately, it’s much easier to separate branding/aesthetic from layout, and treat the two as separate concerns .<br /> <br /> ↗<br /> <br /> Utility classes As we already stated, classes diﬀer from the other global styling methods in terms of their portability: you can use classes between diﬀerent HTML elements and their types. This allows us to diverge from inherited, universal, and element styles globally. For example, all of our elements may be styled, by default, with a 2.25rem font-size:<br /> <br /> h2 { font-size: 2.25rem; } h3 { font-size: 1.75rem; }<br /> <br /> However, there may be a speciﬁc cases where we want that fontsize to be diminished slightly (perhaps horizontal space is at a premium, or the heading is somewhere where it should have less visual aﬀordance). If we were to switch to an element to aﬀect this visual change, we would make a nonsense of the document structure .<br /> <br /> ↗<br /> <br /> Instead, we could build a more complex selector pertaining to the smaller ’s context:<br /> <br /> .sidebar h2 { font-size: 1.75rem; }<br /> <br /> While this is better than messing up the document structure, I've made the mistake of not taking the whole emerging system into consideration: We've solved the problem for a speciﬁc element, in a speciﬁc context, when we should be solving the general problem (needing to adjust font-size) for any element in any context. This is where utility classes come in.<br /> <br /> /* ↓ Backslash to escape the colon */ .font-size\:base { font-size: 1rem; } .font-size\:biggish { font-size: 1.75rem; } .font-size\:big { font-size: 2.25rem; }<br /> <br /> We use a very on the nose naming convention, which emulates CSS declaration structure: property-name:value. This helps with recollection of utility class names, especially where the value echos the actual value, like .text-align:center. Sharing values between elements and utilities is a job for custom properties . Note that we’ve made the custom properties themselves globally available by attaching them to the :root () element:<br /> <br /> ↗<br /> <br /> :root { --font-size-base: 1rem; --font-size-biggish: 1.75rem; --font-size-big: 2.25rem; } /* elements */ h3 { font-size: var(--font-size-biggish); } h2 { font-size: var(--font-size-big); } /* utilities */ .font-size\:base { font-size: var(--font-size-base) !important; } .font-size\:biggish { font-size: var(--font-size-biggish) !important; } .font-size\:big { font-size: var(--font-size-big) !important; }<br /> <br /> Each utility class has an !important suﬃx to max out its speciﬁcity. Utility classes are for ﬁnal adjustments, and should not be overridden by anything that comes before them.<br /> <br /> Sensible CSS architecture has “reach” (how many elements are aﬀected) inversely proportional to speciﬁcity (how complex the selectors are). This was formalized by Harry Roberts as ITCSS, with IT standing for Inverted Triangle.<br /> <br /> The values in the previous example are just for illustration. For consistency across the design, your sizes should probably be derived from a modular scale. See Modular scale for more.<br /> <br /> ⚠  Too many utility classes One thing we highly recommend is not including utility classes until you need them. You don’t want to send users any unused or redundant data. For this project, we maintain a helpers.css ﬁle and add utilities as we ﬁnd ourselves reaching for them. If we ﬁnd the text-align:center class isn’t taking eﬀect, we must not have added it in the CSS yet — so we put it in our helpers.css ﬁle for present and future use.<br /> <br /> ↗<br /> <br /> In a utility ﬁrst approach to CSS, inherited, universal, and element styles are not really leveraged at all. Instead, combinations of individual styles are applied on a case-by-case basis to individual and independent elements. Using the Tailwind utility-ﬁrst framework this might result—as exempliﬁed by Tailwind's own documentation—in class values like the following:<br /> <br /> ↗<br /> <br /> class="rounded-lg px-4 md:px-5 xl:px-4 py-3 md:py-4 xl:py-3 bg-teal-500 hover:bgteal-600 md:text-lg xl:text-base text-white font-semibold leading-tight shadowmd"<br /> <br /> There may be reasons, under speciﬁc circumstances, why one might want to go this way. Perhaps there is a great deal of detail and disparity in the visual design that beneﬁts from having this kind of granular control, or perhaps you want to prototype something quickly without context switching between CSS and HTML. Every Layout's approach assumes you want to create robustness and consistency with the minimum of manual intervention. Hence, the concepts and techniques laid out here leverage axioms, primitives, and the styling algorithms that extrapolate from them instead.<br /> <br /> Local or 'scoped' styles<br /> <br /> ↗<br /> <br /> Notably, the id attribute/property (for reasons of accessibility , most importantly) can only be used on one HTML element per document. Styling via the id selector is therefore limited to one instance.<br /> <br /> #unique { /* ↓ Only styles id="unique" */ font-family: sans-serif; }<br /> <br /> ↗<br /> <br /> The id selector has a very high speciﬁcity because it’s assumed unique styles are intended to override competing generic styles in all cases. Of course, there’s nothing more “local” or instance speciﬁc than applying styles directly to elements using the style attribute/property:<br /> <br /> <p style="font-family: sans-serif">...</p><br /> <br /> The only remaining standard for localizing styles is within Shadow DOM. By making an element a shadowRoot, one can use lowspeciﬁcity selectors that only aﬀect elements inside that parent.<br /> <br /> const elem = document.querySelector('div'); const shadowRoot = elem.attachShadow({mode: 'open'}); shadowRoot.innerHTML = `<br /> <br /> <p>A sans-serif paragraph</p> `;<br /> <br /> Drawbacks The id selector, inline styles, and Shadow DOM all have drawbacks: selectors: Many ﬁnd the high speciﬁcity to cause systemic issues. There’s also the necessity of coming up with the id’s name in each case. Dynamically generating a unique string is often preferable. Inline styles: A maintenance nightmare, which is the reason CSS was antidotally conceived in the ﬁrst place. Shadow DOM: Not only are styles prevented from “leaking out” of the Shadow DOM root, but (most) styles are not permitted to get in either — meaning you can no longer leverage global styling. id<br /> <br /> What we need is a way to simultaneously leverage global styling, but apply local, instance-speciﬁc styles in a controlled fashion.<br /> <br /> Primitives and props As set out in Composition, the main focus of Every Layout is on the simple layout primitives that help to arrange elements/boxes together. These are the primary tools for eliciting layout and take their place between generic global styles and utilities. 1. Universal (including inherited) styles 2. Layout primitives 3. Utility classes Manifested as reusable components, using the custom elements speciﬁcation , these layouts can be used globally. But unique conﬁgurations of these layouts are possible using props (properties).<br /> <br /> ↗<br /> <br /> Interoperability Custom elements are used in place of React, Preact, or Vue components (which all also use props) in Every Layout because they are native, and can be used across diﬀerent web application frameworks. Each layout also comes with a code generator to produce just the CSS code needed to achieve the layout. You can use this to create a Vue-speciﬁc layout primitive (for example) instead.<br /> <br /> Defaults Each layout component has an accompanying stylesheet that deﬁnes its basic and default styles. For example, the Stack stylesheet (Stack.css) looks like the following.<br /> <br /> stack-l { display: block; } stack-l > * + * { margin-top: var(--s1); }<br /> <br /> A few things to note: The display: block declaration is necessary since custom elements render as inline elements by default. See Boxes for more information on block and inline element behavior. The margin-top value is what makes the Stack a stack: it inserts margin between a vertical stack of elements. By default, that margin value matches the ﬁrst point on our modular scale: --s1. The * selector applies to any element, but our use of * is qualiﬁed to match any successive child element of a (note the adjacent sibling combinator ). The layout primitive is a composition in abstract, and should not prescribe the content, so I use * to match any child element types given to it.<br /> <br /> ↗<br /> <br /> In the custom element deﬁnition itself, we apply the default value to the space property:<br /> <br /> get space() { return this.getAttribute('space') || 'var(--s1)'; }<br /> <br /> Each Every Layout custom element builds an embedded stylesheet based on the instance’s property values. That is, this… <br /> <br /> ... ... ... <br /> <br /> …would become this… <br /> <br /> ... ... ... <br /> <br /> … and would generate this: <br /> <br /> However—and this part is important—the Stack-var(--s3) string only represents a unique conﬁguration for a layout, not a unique instance. One id="Stack-var(--s3)" <br /> <br /> `;<br /> <br /> Passing via props Sometimes we might want our custom element to consume certain styles from properties (props) — in this case a padding prop. <br /> <br /> <br /> <br /> The component A custom element implementation of the Stack is available for download .<br /> <br /> ↗<br /> <br /> Props API The following props (attributes) will cause the Stack component to re-render when altered. They can be altered by hand—in browser developer tools—or as the subjects of inherited application state.<br /> <br /> Name<br /> <br /> Type<br /> <br /> Default<br /> <br /> Description<br /> <br /> space<br /> <br /> string<br /> <br /> "var(--s1)"<br /> <br /> A CSS margin value<br /> <br /> recursive<br /> <br /> boolean<br /> <br /> false<br /> <br /> Whether the spaces apply recursively (i.e. regardless of nesting level)<br /> <br /> splitAfter<br /> <br /> number<br /> <br /> Examples Basic<br /> <br /> </p> <br /> <br /> Nested<br /> <br /> </p> <p></p><br /> <br /> </p> <p></p> <br /> <br /> The element after which to split the stack with an auto margin<br /> <br /> Recursive <br /> <br /> <br /> <br /> <br /> <br /> List semantics In some cases, browsers should interpret the Stack as a list for screen reader software. You can use the following ARIA attribution to achieve this. <br /> <br /> <br /> <br /> A Box within a Stack In the context of a Stack, the Box will have margin-top applied if it is preceded by a sibling element.<br /> <br /> <p>...</p> ... <br /> <br /> <br /> <br /> The Component A custom element implementation of the Center is available for download .<br /> <br /> ↗<br /> <br /> Props API The following props (attributes) will cause the Center component to re-render when altered. They can be altered by hand—in browser developer tools—or as the subjects of inherited application state.<br /> <br /> Name<br /> <br /> Type<br /> <br /> Default<br /> <br /> Description<br /> <br /> max<br /> <br /> string<br /> <br /> "var(--measure)"<br /> <br /> A CSS max-width value<br /> <br /> andText<br /> <br /> boolean<br /> <br /> false<br /> <br /> Center align the text too (text-align: center)<br /> <br /> gutters<br /> <br /> boolean<br /> <br /> 0<br /> <br /> The minimum space on either side of the content<br /> <br /> intrinsic<br /> <br /> boolean<br /> <br /> false<br /> <br /> Center child elements based on their content width<br /> <br /> Examples Basic You can create a single column web page just by nesting a Stack inside a Center inside a Box. The Box being padded by default means providing padding to either side of the Center using the gutters prop is not necessary. <br /> <br /> <br /> <br /> <br /> <br /> </li> <li></li> </ul><br /> <br /> The component A custom element implementation of the Cluster is available for download .<br /> <br /> ↗<br /> <br /> Props API<br /> <br /> The following props (attributes) will cause the Cluster component to re-render when altered. They can be altered by hand—in browser developer tools—or as the subjects of inherited application state.<br /> <br /> Name<br /> <br /> Type<br /> <br /> Default<br /> <br /> Description<br /> <br /> justify<br /> <br /> string<br /> <br /> "flex-start"<br /> <br /> A CSS justify-content value<br /> <br /> align<br /> <br /> string<br /> <br /> "flex-start"<br /> <br /> A CSS align-items value<br /> <br /> "var(--s1)"<br /> <br /> A CSS gap value. The minimum space between the clustered child elements.<br /> <br /> space<br /> <br /> string<br /> <br /> Examples Basic Using the defaults. <br /> <br /> <br /> <br /> <br /> <br /> List Since Clusters typically represent groups of similar elements, they beneﬁt from being marked up as a list. List elements present information non-visually, to screen reader software. It’s important screen reader users are aware there is a list present, and how many items it contains.<br /> <br /> Since our custom element is not a <ul> (and <li> elements cannot exist without a <ul> parent) we can provide the list semantics using ARIA instead: role="list" and role="listitem": <br /> <br /> <br /> <br /> content of first list item --> content of second list item --> etc --> etc --><br /> <br /> The Sidebar The problem When the dimensions and settings of the medium for your visual design are indeterminate, even something simple like putting things next to other things is a quandary. Will there be enough horizontal space? And, even if there is, will the layout make the most of the vertical space?<br /> <br /> Where there’s not enough space for two adjacent items, we tend to employ a breakpoint (a width-based @media query) to reconﬁgure the<br /> <br /> layout, and place the two items one atop the other. It’s important we use content rather than device based @media queries. That is, we should intervene anywhere the content needs reconﬁguration, rather than adhering to arbitrary widths like 720px and 1024px. The massive proliferation of devices means there’s no real set of standard dimensions to design for. But even this strategy has a fundamental shortcoming: @media queries for width pertain to the viewport width, and have no bearing on the actual available space. A component might appear within a 300px wide container, or it might appear within a more generous 500px wide container. But the width of the viewport is the same in either case, so there’s nothing to “respond” to.<br /> <br /> Design systems tend to catalogue components that can appear between diﬀerent contexts and spaces, so this is a real problem. Only with a capability like the mooted container queries might we teach our component layouts to be fully context aware.<br /> <br /> ↗<br /> <br /> In some respects, the CSS Flexbox module, with its provision of flex-basis, can already govern its own layout, per context, rather well. Consider the following code:<br /> <br /> .parent { display: flex; flex-wrap: wrap; } .parent > * { flex-grow: 1; flex-shrink: 1; flex-basis: 30ch; }<br /> <br /> The flex-basis value essentially determines an ideal target width for the subject child elements. With growing, shrinking, and wrapping enabled, the available space is used up such that each element is as close to 30ch wide as possible. In a > 90ch wide container, more than three children may appear per row. Between 60ch and 90ch only two items can appear, with one item taking up the whole of the ﬁnal row (if the total number is odd).<br /> <br /> An item with an odd index, which is also the last item, can be expressed by concatenating two pseudo selectors: :nth-child(odd):last-child<br /> <br /> By designing to ideal element dimensions, and tolerating reasonable variance, you can essentially do away with @media breakpoints. Your component handles its own layout, intrinsically, and without the need for manual intervention. Many of the layouts we’re covering ﬁnesse this basic mechanism to give you more precise control over placement and wrapping. For instance, we might want to create a classic sidebar layout, wherein one of two adjacent elements has a ﬁxed width, and the other—the principle element, if you will—takes up the rest of the available space. This should be responsive, without @media breakpoints, and we should be able to set a container based breakpoint for wrapping the elements into a vertical conﬁguration.<br /> <br /> The solution<br /> <br /> The Sidebar layout is named for the element that forms the diminutive sidebar: the narrower of two adjacent elements. It is a quantum layout, existing simultaneously in one of the two conﬁgurations—horizontal and vertical—illustrated below. Which conﬁguration is adopted is not known at the time of conception, and is dependent entirely on the space it is aﬀorded when placed within a parent container.<br /> <br /> Where there is enough space, the two elements appear side-byside. Critically, the sidebar’s width is ﬁxed while the two elements are adjacent, and the non-sidebar takes up the rest of the available space. But when the two elements wrap, each takes up 100% of the shared container.<br /> <br /> Equal height Note the two adjacent elements are the same height, regardless of the content they contain. This is thanks to a default align-items<br /> <br /> value of stretch. In most cases, this is desirable (and was very diﬃcult to achieve before the advent of Flexbox). However, you can “switch oﬀ” this behavior with align-items: flex-start.<br /> <br /> How to force wrapping at a certain point, we will come to shortly. First, we need to set up the horizontal layout.<br /> <br /> .with-sidebar { display: flex; flex-wrap: wrap; } .sidebar { flex-basis: 20rem; flex-grow: 1; } .not-sidebar { flex-basis: 0; flex-grow: 999; }<br /> <br /> The key thing to understand here is the role of available space. Because the .not-sidebar element’s flex-grow value is so high (999), it takes up all the available space. The flex-basis value of the .sidebar element is not counted as available space and is<br /> <br /> subtracted from the total, hence the sidebar-like layout. The nonsidebar essentially squashes the sidebar down to its ideal width.<br /> <br /> The .sidebar element is still technically allowed to grow, and is able to do so where .not-sidebar wraps beneath it. To control where that wrapping happens, we can use min-width.<br /> <br /> .not-sidebar { flex-basis: 0; flex-grow: 999; min-width: 50%; }<br /> <br /> Where .not-sidebar is destined to be less than or equal to 50% of the container’s width, it is forced onto a new line/row and grows to take up all of its space. The value can be anything, but 50% is apt since a<br /> <br /> sidebar ceases to be a sidebar when it is no longer the narrower of the two elements.<br /> <br /> The gutter So far, we’re treating the two elements as if they’re touching. Instead, we might want to place a gutter/space between them. Since we want that space to appear between the elements regardless of the conﬁguration and we don’t want there to be extraneous margins on the outer edges, we’ll use the gap property as we did for the Cluster layout. For a gutter of 1rem, the CSS now looks like the following.<br /> <br /> .with-sidebar { display: flex; flex-wrap: wrap; gap: 1rem; } .sidebar { /* ↓ The width when the sidebar _is_ a sidebar */ flex-basis: 20rem; flex-grow: 1; } .not-sidebar { /* ↓ Grow from nothing */ flex-basis: 0; flex-grow: 999; /* ↓ Wrap when the elements are of equal width */ min-width: 50%; }<br /> <br /> This interactive demo is only available on the Every Layout site<br /> <br /> ↗.<br /> <br /> Intrinsic sidebar width So far, we have been prescribing the width of our sidebar element (flex-basis: 20rem, in the last example). Instead, we might want to let the sidebar’s content determine its width. Where we do not provide a flex-basis value at all, the sidebar’s width is equal to the width of its contents. The wrapping behavior remains the same.<br /> <br /> If we set the width of an image inside of our sidebar to 15rem, that will be the width of the sidebar in the horizontal conﬁguration. It will grow to 100% in the vertical conﬁguration.<br /> <br /> Intrinsic web design<br /> <br /> ↗<br /> <br /> The term Intrinsic Web Design was coined by Jen Simmons, and refers to a recent move towards tools and mechanisms in CSS that are more beﬁtting of the medium. The kind of algorithmic, selfgoverning layouts set out in this series might be considered intrinsic design methods. The term intrinsic connotes introspective processes; calculations made by the layout pattern about itself. My use of 'intrinsic' in this section speciﬁcally refers to the inevitable width of an element as<br /> <br /> determined by its contents. A button's width, unless explicitly set, is the width of what's inside it. The CSS Box Sizing Module was formerly called the Intrinsic & Extrinsic Sizing Module, because it set out how elements can be sized both intrinsically and extrinsically. Generally, we should err on the side of intrinsic sizing. As covered in Axioms, we're better allowing the browser to size elements according to their content, and only provide suggestions, rather than prescriptions, for layout. We are outsiders.<br /> <br /> Use cases The Sidebar is applicable to all sorts of content. The ubiquitous “media object” (the placing of an item of media next to a description) is a mainstay, but it can also be used to align buttons with form inputs (where the button forms the sidebar and has an intrinsic, content-based width). The following example uses the component version, deﬁned as a custom element. <br /> <br /> <br /> <br /> Search <br /> <br /> This interactive demo is only available on the Every Layout site<br /> <br /> ↗.<br /> <br /> The generator Use this tool to generate basic Sidebar CSS and HTML. The code generator tool is only available in the accompanying documentation site . Here is the basic solution, with comments. It is assumed the non-sidebar is the :last-child in this example.<br /> <br /> ↗<br /> <br /> CSS .with-sidebar { display: flex; flex-wrap: wrap; /* ↓ The default value is the first point on the modular scale */ gap: var(--gutter, var(--s1)); } .with-sidebar > :first-child { /* ↓ The width when the sidebar _is_ a sidebar */ flex-basis: 20rem; flex-grow: 1; } .with-sidebar > :last-child { /* ↓ Grow from nothing */ flex-basis: 0; flex-grow: 999; /* ↓ Wrap when the elements are of equal width */ min-width: 50%; }<br /> <br /> HTML (You don’t have to use s; use semantic elements where appropriate.) <br /> <br /> <br /> <br /> The component A custom element implementation of the Sidebar is available for download .<br /> <br /> ↗<br /> <br /> Props API The following props (attributes) will cause the Sidebar component to re-render when altered. They can be altered by hand—in browser developer tools—or as the subjects of inherited application state.<br /> <br /> Name<br /> <br /> side<br /> <br /> Type<br /> <br /> string<br /> <br /> Default<br /> <br /> Description<br /> <br /> "left"<br /> <br /> Which element to treat as the sidebar (all values but "left" are considered "right")<br /> <br /> string<br /> <br /> Represents the width of the sidebar when adjacent. If not set (null) it defaults to the sidebar's content width<br /> <br /> contentMin<br /> <br /> string<br /> <br /> "50%"<br /> <br /> A CSS percentage value. The minimum width of the content element in the horizontal conﬁguration<br /> <br /> space<br /> <br /> string<br /> <br /> "var(--s1)"<br /> <br /> A CSS margin value representing the space between the two elements<br /> <br /> noStretch<br /> <br /> boolean<br /> <br /> false<br /> <br /> Make the adjacent elements adopt their natural height<br /> <br /> sideWidth<br /> <br /> Examples Media object Uses the default 50% “breakpoint” and an increased space value, taken from the custom property-based modular scale. The sidebar/image is 15rem wide in the horizontal conﬁguration. Because the image is a ﬂex child, noStretch must be supplied, to stop it distorting. If the image was placed inside a (making the the ﬂex child) this would not be necessary.<br /> <br /> <br /> <br /> <p></p> <br /> <br /> The Switcher As we set out in Boxes, it’s better to provide suggestions rather than diktats about the way the visual design is laid out. An overuse of @media breakpoints can easily come about when we try to ﬁx designs to diﬀerent contexts and devices. By only suggesting to the browser how it should arrange our layout boxes, we move from creating multiple layouts to single quantum layouts existing simultaneously in diﬀerent states. The flex-basis property is an especially useful tool when adopting such an approach. A declaration of width: 20rem means just that: make it 20rem wide — regardless of circumstance. But flex-basis: 20rem is more nuanced. It tells the browser to consider 20rem as an ideal or “target” width. It is then free to calculate just how closely the 20rem target can be resembled given the content and available space. You empower the browser to make the right decision for the content, and the user, reading that content, given their circumstances. Consider the following code.<br /> <br /> .grid { display: flex; flex-wrap: wrap; } .grid > * { width: 33.333%; } @media (max-width: 60rem) { .grid > * { width: 50%; } } @media (max-width: 30rem) { .grid > * { width: 100%; } }<br /> <br /> The mistake here is to adopt an extrinsic approach to the layout: we are thinking about the viewport ﬁrst, then adapting our boxes to it. It’s verbose, unreliable, and doesn’t make the most of Flexbox’s capabilities. With flex-basis, it's easy to make a responsive Grid-like layout which is in no need of @media breakpoint intervention. Consider this alternative code:<br /> <br /> .grid { display: flex; flex-wrap: wrap; } .grid > * { flex: 1 1 20rem; }<br /> <br /> Now I'm thinking intrinsically — in terms of the subject elements’ own dimensions. That flex shorthand property translates to "let each element grow and shrink to ﬁll the space, but try to make it about 20rem wide". Instead of manually pairing the column count to the viewport width, I’m telling the browser to generate the columns based on my desired column width. I’ve automated my layout.<br /> <br /> ↗<br /> <br /> ↗<br /> <br /> As Zoe Mickley Gillenwater has pointed out, flex-basis, in combination with flex-grow and flex-shrink, achieves something similar to an element/container query in that “breaks” occur, implicitly, according to the available space rather than the viewport width. My Flexbox “grid” will automatically adopt a diﬀerent layout depending on the size of the container in which it is placed. Hence: quantum layout.<br /> <br /> ↗<br /> <br /> Issues with two-dimensional symmetry While this is a serviceable layout mechanism, it only produces two layouts wherein each element is the same width: The single-column layout (given the narrowest of containers) The regular multi-column layout (where each row has an equal number of columns) In other cases, the number of elements and the available space conspire to make layouts like these:<br /> <br /> This is not necessarily a problem that needs to be solved, depending on the brief. So long as the content conﬁgures itself to remain in the space, unobscured, the most important battle has been won. However, for smaller numbers of subject elements, there may be cases where you wish to switch directly from a horizontal (one row) to a vertical (one column) layout and bypass the intermediary states. Any element that has wrapped and grown to adopt a diﬀerent width could be perceived by the user as being “picked out”; made to deliberately look diﬀerent, or more important. We should want to avoid this confusion.<br /> <br /> The solution The Switcher element (based on the bizarrely named Flexbox Holy Albatross ) switches a Flexbox context between a horizontal and a vertical layout at a given, container-based breakpoint. That is, if the breakpoint is 30rem, the layout will switch to a vertical conﬁguration when the parent element is less than 30rem wide.<br /> <br /> ↗<br /> <br /> In order to achieve this switch, ﬁrst a basic horizontal layout is instated, with wrapping and flex-grow enabled:<br /> <br /> .switcher > * { display: flex; flex-wrap: wrap; } .switcher > * > * { flex-grow: 1; }<br /> <br /> The flex-basis value enters the (current) width of the container, expressed as 100%, into a calculation with the designated 30rem breakpoint.<br /> <br /> 30rem - 100%<br /> <br /> Depending on the parsed value of 100%, this will return either a positive or negative value: positive if the container is narrower than 30rem, or negative if it is wider. This number is then multiplied by 999 to produce either a very large positive number or a very large negative number:<br /> <br /> (30rem - 100%) * 999<br /> <br /> Here is the flex-basis declaration in situ:<br /> <br /> .switcher > * { display: flex; flex-wrap: wrap; } .switcher > * > * { flex-grow: 1; flex-basis: calc((30rem - 100%) * 999); }<br /> <br /> A negative flex-basis value is invalid, and dropped. Thanks to CSS’s resilient error handling this means just the flex-basis line is ignored, and the rest of the CSS is still applied. The erroneous negative flex-basis value is corrected to 0 and—because flex-grow is present—each element grows to take up an equal proportion of horizontal space.<br /> <br /> ⚠  Content width The previous statement, "each element grows to take up an equal proportion of the horizontal space" is true where the content of any one element does not exceed that alloted proportion. To keep things in order, nested elements can be given a max-width of 100%.<br /> <br /> As ever, setting ﬁxed widths (or even min-widths) can be problematic. Instead, width should be suggested or inferred from context.<br /> <br /> If, on the other hand, the calculated flex-basis value is a large positive number, each element maxes out to take up a whole row. This results in the vertical conﬁguration. Intermediary conﬁgurations are successfully bypassed.<br /> <br /> Gutters To support margins ('gutters'; 'gaps') between the subject elements, we could adapt the negative margin technique covered in the Cluster documentation. However, the flex-basis calculation would need to be adapted to compensate for the increased width produced by stretching the parent element. That is, by applying negative margins on all sides, the parent becomes wider than its container and their 100% values no longer match.<br /> <br /> .switcher { --threshold: 30rem; --space: 1rem; } .switcher > * { display: flex; flex-wrap: wrap; /* ↓ Multiply by -1 to make negative */ margin: calc(var(--space) / 2 * -1); } .switcher > * > * { flex-grow: 1; flex-basis: calc((var(--threshold) - (100% - var(--space))) * 999); /* ↓ Half the value to each element, combining to make the whole */ margin: calc(var(--space) / 2); }<br /> <br /> Instead, since gap is now supported in all major browsers, we don’t have to worry about such calculations any more. The gap property represents the browser making such calculations for us. And it allows us to cut both the HTML and CSS code down quite a bit.<br /> <br /> .switcher { display: flex; flex-wrap: wrap; gap: 1rem; --threshold: 30rem; } .switcher > * { flex-grow: 1; flex-basis: calc((var(--threshold) - 100%) * 999); }<br /> <br /> This interactive demo is only available on the Every Layout site<br /> <br /> ↗.<br /> <br /> Managing proportions There is no reason why one or more of the elements, when in a horizontal conﬁguration, cannot be alloted more or less of the available space. By giving the second element (:nth-child(2)) flexgrow: 2 is will become twice as wide as its siblings (and the siblings will shrink to compensate).<br /> <br /> .switcher > :nth-child(2) { flex-grow: 2; }<br /> <br /> Quantity threshold In the horizontal conﬁguration, the amount of space alloted each element is determined by two things: The total space available (the width of the container) The number of sibling elements So far, my Switcher switches according to the available space. But we can add as many elements as we like, and they will lay out together horizontally above the breakpoint (or threshold). The more elements we add, the less space each gets alloted, and things can easily start to get squashed up. This is something that could be addressed in documentation, or by providing warning or error messages in the developer's console. But that isn't very eﬃcient or robust. Better to teach the layout to handle<br /> <br /> this problem itself. The aim for each of the layouts in this project is to make them as self-governing as possible. It is quite possible to style each of a group of sibling elements based on how many siblings there are in total. The technique is something called a quantity query . Consider the following code.<br /> <br /> ↗<br /> <br /> .switcher > :nth-last-child(n+5), .switcher > :nth-last-child(n+5) ~ * { flex-basis: 100%; }<br /> <br /> Here, we are applying a flex-basis of 100% to each element, only where there are ﬁve or more elements in total. The nth-lastchild(n+5) selector targets any elements that are more than 4 from the end of the set. Then, the general sibling combinator (~) applies the same rule to the rest of the elements (it matches anything after :nth-last-child(n+5)). If there are fewer that 5 items, no :nth-lastchild(n+5) elements and the style is not applied.<br /> <br /> Now the layout has two kinds of threshold that it can handle, and is twice as robust as a result.<br /> <br /> Use cases There are any number of situations in which you might want to switch directly between a horizontal and vertical layout. But it is especially useful where each element should be considered equal, or part of a continuum. Card components advertising products should share the same width no matter the orientation, otherwise one or more cards could be perceived as highlighted or featured in some way. A set of numbered steps is also easier on cognition if those steps are laid out along one horizontal or vertical line.<br /> <br /> The Generator The code generator tool is only available in the accompanying documentation site . Here is the basic solution, with comments:<br /> <br /> ↗<br /> <br /> CSS<br /> <br /> .switcher { display: flex; flex-wrap: wrap; /* ↓ The default value is the first point on the modular scale */ gap: var(--gutter, var(--s1)); /* ↓ The width at which the layout “breaks” */ --threshold: 30rem; } .switcher > * { /* ↓ Allow children to grow */ flex-grow: 1; /* ↓ Switch the layout at the --threshold */ flex-basis: calc((var(--threshold) - 100%) * 999); } .switcher > :nth-last-child(n+5), .switcher > :nth-last-child(n+5) ~ * { /* ↓ Switch to a vertical configuration if there are more than 4 child elements */ flex-basis: 100%; }<br /> <br /> HTML <br /> <br /> <br /> <br /> The component A custom element implementation of the Cover is available for download .<br /> <br /> ↗<br /> <br /> Props API The following props (attributes) will cause the Cover component to re-render when altered. They can be altered by hand—in browser developer tools—or as the subjects of inherited application state.<br /> <br /> Name<br /> <br /> Type<br /> <br /> Default<br /> <br /> Description<br /> <br /> centered<br /> <br /> string<br /> <br /> "h1"<br /> <br /> A simple selector such an element or class selector, representing the centered (main) element in the cover<br /> <br /> space<br /> <br /> string<br /> <br /> "var(--s1)"<br /> <br /> The minimum space between and around all of the child elements<br /> <br /> minHeight<br /> <br /> string<br /> <br /> "100vh"<br /> <br /> The minimum height for the Cover<br /> <br /> noPad<br /> <br /> boolean<br /> <br /> false<br /> <br /> Whether the spacing is also applied as padding to the container element<br /> <br /> Examples Basic Just a centered element (an ) with no header or footer companions. The context/parent adopts the default min-height of 100vh. <br /> <br /> Welcome! <br /> <br /> ⚠  One<br /> <br /> per page<br /> <br /> For reasons of accessible document structure, there should only be one element per page. This is the page’s main heading to screen reader users. If you add several successive s, all but the ﬁrst should have an to indicate it is a subsection in the document structure.<br /> <br /> The Grid The problem Designers sometimes talk about designing to a grid. They put the grid—a matrix of horizontal and vertical lines—in place ﬁrst, then they populate that space, making the words and pictures span the boxes those intersecting lines create.<br /> <br /> A 'grid ﬁrst' approach to layout is only really tenable where two things are known ahead of time: 1. The space 2. The content For a paper-destined magazine layout, like the one described in Axioms, these things are attainable. For a screen and deviceindependent web layout containing dynamic (read: changeable) content, they fundamentally are not.<br /> <br /> The CSS Grid module is radical because it lets you place content anywhere within a predeﬁned grid, and as such brings designing to a grid to the web. But the more particular and deliberate the placement of grid content, the more manual adjustment, in the form of @media breakpoints, is needed to adapt the layout to diﬀerent spaces. Either the grid deﬁnition itself, the position of content within it, or both will have to be changed by hand, and with additional code. As I covered in The Switcher, @media breakpoints pertain to viewport dimensions only, and not the immediate available space oﬀered by a parent container. That means layout components deﬁned using @media breakpoints are fundamentally not context independent: a huge issue for a modular design system. It is not, even theoretically, possible to design to a grid in a contextindependent, automatically responsive fashion. However, it's possible to create basic grid-like formations: sets of elements divided into both columns and rows.<br /> <br /> In Every Layout, we design with content. Without content, a grid needn't exist; with content, a grid formation may emerge from it<br /> <br /> Compromise is inevitable, so it's a question of ﬁnding the most archetypal yet eﬃcient solution.<br /> <br /> Flexbox for grids Using Flexbox, I can create a grid formation using flex-basis to determine an ideal width for each of the grid cells:<br /> <br /> .flex-grid { display: flex; flex-wrap: wrap; } .flex-grid > * { flex: 1 1 30ch; }<br /> <br /> The display: flex declaration deﬁnes the Flexbox context, flexwrap: wrap allows wrapping, and flex: 1 1 30ch says, "the ideal width should be 30ch, but items should be allowed to grow and shrink according to the space available". Importantly, the number of columns is not prescribed based on a ﬁxed grid schematic; it's determined algorithmically based on the flex-basis and the available space. The content and the context deﬁne the grid, not a human arbiter. In The Switcher, we identiﬁed an interaction between wrapping and growth that leads items to 'break' the grid shape under certain circumstances:<br /> <br /> On the one hand, the layout takes up all its container's horizontal space, and there are no unsightly gaps. On the other, a generic grid formation should probably make each of its items align to both the horizontal and vertical rules.<br /> <br /> Mitigation You'll recall the global measure rule explored in the Axioms section. This ensured all applicable elements could not become wider than a comfortably readable line-length. Where a grid-like layout created with Flexbox results in a full-width :last-child element, the measure of its contained text elements would be in danger of becoming too long. Not with that global measure style in place. The beneﬁt of global rules (axioms) is in not having to consider each design principle per-layout. Many are already taken care of.<br /> <br /> Grid for grids The aptly named CSS Grid module brings us closer to a 'true' responsive grid formation in one speciﬁc sense: It's possible to make items grow, shrink, and wrap together without breaching the column boundaries.<br /> <br /> This behavior is closer to the archetypal responsive grid I have in mind, and will be the layout we pursue here. There's just one major implementation issue to quash. Consider the following code.<br /> <br /> .grid { display: grid; grid-gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }<br /> <br /> This is the pattern, which I ﬁrst discovered in Jen Simmon's Layout Land video series. To break it down:<br /> <br /> ↗<br /> <br /> 1.<br /> <br /> display: grid:<br /> <br /> sets the grid context, which makes grid cells for<br /> <br /> its children. 2. grid-gap: places a 'gutter' between each grid item (saving us from having to employ the negative margin technique ﬁrst described in The Cluster).<br /> <br /> 3.<br /> <br /> grid-template-columns:<br /> <br /> Would ordinarily deﬁne a rigid grid for designing to, but used with repeat and auto-fit allows the dynamic spawning and wrappping of columns to create a behavior similar to the preceding Flexbox solution. 4. minmax: This function ensures each column, and therefore each cell of content shares a width between a minimum and maximum value. Since 1fr represents one part of the available space, columns grow together to ﬁll the container. The shortcoming of this layout is the minimum value in minmax(). Unlike flex-basis, which allows any amount of growing or shrinking from a single 'ideal' value, minmax() sets a scope with hard limits. Without a ﬁxed minimum (250px, in this case) there's nothing to trigger the wrapping. A value of 0 would just produce one row of ever-diminishing widths. But it being a ﬁxed minimum has a clear consequence: in any context narrower than the minimum, overﬂow will occur.<br /> <br /> To put it simply: the pattern as it stands can only safely produce layouts where the columns converge on a width that is below the estimated minimum for the container. About 250px is reasonably safe because most handheld device viewports are no wider. But what if I want my columns to grow considerably beyond this width, where the space is available? With Flexbox and flex-basis that is quite possible, but with CSS Grid it is not without assistance.<br /> <br /> The solution Each of the layouts described so far in Every Layout have handled sizing and wrapping with just CSS, and without @media queries. Sometimes it's not possible to rely on CSS alone for automatic reconﬁguration. In these circumstances, turning to @media breakpoints is out of the question, because it undermines the modularity of the layout system. Instead, I might defer to JavaScript. But I should do so judiciously, and using progressive enhancement. ResizeObserver<br /> <br /> ↗ (soon to be available in most modern browsers ↗)<br /> <br /> is a highly optimized API for tracking and responding to changes in element dimensions. It is the most eﬃcient method yet for creating container queries with JavaScript. I wouldn't recommend using it as a matter of course, but employed only for solving tricky layout issues is acceptable.<br /> <br /> ↗<br /> <br /> Consider the following code:<br /> <br /> .grid { display: grid; grid-gap: 1rem; } .grid.aboveMin { grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); }<br /> <br /> The aboveMin class presides over an overriding declaration that produces the responsive grid. ResizeObserver is then instructed to add and remove the aboveMin class depending on the container width. The minimum value of 500px (in the above example) is only applied where the container itself is wider than that threshold. Here is a standalone function to activate the ResizeObserver on a grid element.<br /> <br /> function observeGrid(gridNode) { // Feature detect ResizeObserver if ('ResizeObserver' in window) { // Get the min value from data-min="[min]" const min = gridNode.dataset.min; // Create a proxy element to measure and convert // the `min` value (which might be em, rem, etc) to `px` const test = document.createElement('div'); test.style.width = min; gridNode.appendChild(test); const minToPixels = test.offsetWidth; gridNode.removeChild(test); const ro = new ResizeObserver(entries => { for (let entry of entries) { // Get the element's current dimensions const cr = entry.contentRect; // `true` if the container is wider than the minimum const isWide = cr.width > minToPixels; // toggle the class conditionally gridNode.classList.toggle('aboveMin', isWide); } }); ro.observe(gridNode); } }<br /> <br /> If ResizeObserver is not supported, the fallback one-column layout is applied perpetually. This basic fallback is included here for brevity, but you could instead fallback to the serviceable-but-imperfect Flexbox solution covered in the previous section. In any case, no content is lost or obscured, and you have the ability to use larger minmax() minimum values for more expressive grid formations. And since we're no longer bound to absolute limits, we can begin employing relative units.<br /> <br /> Here's an example initialization (code is elided for brevity): <br /> <br /> <br /> <br /> The component<br /> <br /> A custom element implementation of the Grid is available for download .<br /> <br /> ↗<br /> <br /> Props API The following props (attributes) will cause the Grid component to rerender when altered. They can be altered by hand—in browser developer tools—or as the subjects of inherited application state.<br /> <br /> Name<br /> <br /> Type<br /> <br /> Default<br /> <br /> Description<br /> <br /> min<br /> <br /> string<br /> <br /> "250px"<br /> <br /> A CSS length value representing x in minmax(min(x, 100%), 1fr)<br /> <br /> space<br /> <br /> string<br /> <br /> "var(--s1)"<br /> <br /> The space between grid cells<br /> <br /> Examples Cards The code for the cards example from Use cases. Note that the min value is a fraction of the standard measure. There's more on typographic measure in the Axioms rudiment.<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> In the custom element implementation to follow (under The Component) an equivalent mechanism takes the form of a Boolean fixed prop’. Adding the fixed attribute overrides the absolute positioning that is default.<br /> <br /> ⚠  Fixed positioning and Shadow DOM In most cases, using a fixed value for position will position the element relative to the viewport. That is, any candidate positioning<br /> <br /> containers (positioned ancestor elements) will be ignored.<br /> <br /> ↗<br /> <br /> However, a shadowRoot host element will be treated as the outer element of a nested document. Therefore, any element with position: fixed found inside Shadow DOM will instead be positioned relative to the shadowRoot host (the element that hosts the Shadow DOM). In eﬀect, it becomes a positioning container as in previous examples.<br /> <br /> Use cases Wherever content needs to be deliberately obscured, the Imposter pattern is your friend. It may be that the content is yet to be made available. In which case, the Imposter may consist of a call-toaction to unlock that content.<br /> <br /> This interactive demo is only available on the Every Layout site<br /> <br /> ↗.<br /> <br /> It may be that the artifacts obscured by the Imposter are more decorative, and do not need to be revealed in full. When creating a dialog using an Imposter, be wary of the accessibility considerations that need to be included—especially those relating to keyboard focus management. Inclusive Components has a chapter on dialogs which describes these considerations in detail.<br /> <br /> ↗<br /> <br /> The generator Use this tool to generate basic Imposter CSS and HTML. The code generator tool is only available in the accompanying documentation site . Here is the basic solution, with comments. The .contain version contains the element within its positioning container, and handles overﬂow.<br /> <br /> ↗<br /> <br /> CSS<br /> <br /> .imposter { /* ↓ Choose the positioning element */ position: var(--positioning, absolute); /* ↓ Position the top left corner in the center */ top: 50%; left: 50%; /* ↓ Reposition so the center of the element is the center of the container */ transform: translate(-50%, -50%); } .imposter.contain { /* ↓ Include a unit, or the calc function will be invalid */ --margin: 0px; /* ↓ Provide scrollbars so content is not obscured */ overflow: auto; /* ↓ Restrict the height and width, including optional spacing/margin between the element and positioning container */ max-width: calc(100% - (var(--margin) * 2)); max-height: calc(100% - (var(--margin) * 2)); }<br /> <br /> HTML An ancestor with a positioning value of relative or absolute must be provided. This becomes the “positioning container” over which the .imposter element is positioned. In the following example, a simple with the position: relative inline style is used. <br /> <br /> <p>Static content</p><br /> <br /> <p>Superimposed content</p> <br /> <br /> The component<br /> <br /> A custom element implementation of the Imposter is available for download .<br /> <br /> ↗<br /> <br /> Props API The following props (attributes) will cause the Imposter component to re-render when altered. They can be altered by hand—in browser developer tools—or as the subjects of inherited application state.<br /> <br /> Name<br /> <br /> breakout<br /> <br /> Type<br /> <br /> boolean<br /> <br /> Default<br /> <br /> Description<br /> <br /> false<br /> <br /> Whether the element is allowed to break out of the container over which it is positioned<br /> <br /> margin<br /> <br /> string<br /> <br /> 0<br /> <br /> The minimum space between the element and the inside edges of the positioning container over which it is placed (where breakout is not applied)<br /> <br /> ﬁxed<br /> <br /> boolean<br /> <br /> false<br /> <br /> Whether to position the element relative to the viewport<br /> <br /> Examples Demo example The code for the demo in the Use cases section. Note the use of aria-hidden="true" on the superimposed sibling content. It’s likely the superimposed content should be unavailable to screen readers, since it is unavailable (or at least mostly obscured) visually. <br /> <br /> <br /> <br /> <p class="h4"><strong>You can’t see all the content, because of this box. </strong></p> <br /> <br /> <br /> <br /> Dialog The Imposter element could take the ARIA attribute role="dialog" to be communicated as a dialog in screen readers. Or, more simply, you could just place a inside the Imposter. Note that the Imposter takes fixed here, to switch from an absolute to fixed position. This means the dialog would stay centered in the viewport as the document is scrolled. <br /> <br /> <p id="message">It’s decision time, sunshine!</p> Yes No <br /> <br /> The Icon The problem Most of the layouts in Every Layout take the form of block components, if you’ll excuse the expression. That is, they set a block-level context wherein they aﬀect the layout of child elements in their control. As you will discover in Boxes, elements with display values of either block, flex, or grid are themselves block-level (flex and grid diﬀer by aﬀecting their child elements in a special way).<br /> <br /> ↗<br /> <br /> Here, we shall be looking at something a lot smaller, and it doesn’t get much smaller than an icon. This will be the ﬁrst layout for which the custom element will retain its default inline display mode. Getting things to line up and look right, inline can be a precarious business. When it comes to icons, we have to worry about things like: The distance between the icon and the text The height of the icon compared with the height of the text<br /> <br /> The vertical alignment of the icon to the text What happens when the text comes after the icon, rather than before What happens when you resize the text<br /> <br /> A simple icon Before looking into any of these, I’m ﬁrst going to give you a really quick crash course in SVG iconography, since SVG is the de facto iconography format on the web. Consider the following code: <br /> <br /> <br /> <br /> This deﬁnes a simple icon: a cross. Let me explain each of the key features: viewBox:<br /> <br /> This deﬁnes the coordinate system for the SVG. The 0 0 part means “count from the top left corner” and the “10 10” part means give the SVG “canvas” 10 horizontal, and 10 vertical, coordinates. We are deﬁning a square, since all our icons will occupy a square space. width and height: This sets the size of the icon. I shall explain why it uses the em unit, and is set to 0.75em shortly. For now, be aware that we set the width and height on the SVG, rather than in CSS, because we want to keep the icon small even if CSS<br /> <br /> fails to load. SVGs are displayed very large in most browsers by default. stroke and stroke-width: These presentational attributes give the elements visible form. They can be written, or overridden, in CSS. But since we aren’t using many, it’s better to make sure these too are CSS-independent. : The element draws a simple line. Here we have one drawn from the top left to the bottom right, followed by one drawn from the top right to the bottom left (making our cross). I’m using 1 and 9, not 0 and 10, to compensate for the line’s stroke-width of 2. Otherwise the line would overﬂow the SVG “canvas”.<br /> <br /> There are many ways to draw the same cross shape. Perhaps the most eﬃcient is to use a element. A path lets you place all the coordinates in one d attribute. The M symbol marks the start of each line’s separate coordinates:<br /> <br /> <br /> <br /> When your SVG data is this terse, there’s no reason not to include it inline rather than using an pointing to an SVG src ﬁle. There are other advantages besides being able to dispense with an HTTP request, like the ability to use currentColor as shown. This keyword makes your inline SVG adopt the color of the surrounding text. For the demo icons to follow, the icons are included via the element, which references one of many icon s deﬁned in a single icons.svg ﬁle (and therefore HTTP request). The currentColor technique still works when referencing SVG data in this way. <br /> <br /> <br /> <br /> In any case, SVG is an eﬃcient scalable format, much better suited to iconography than raster images like PNGs, and without the attendant accessibility issues of icon fonts.<br /> <br /> ↗<br /> <br /> Our task here is to create a dependable SVG canvas for square icons, and ensure it ﬁts seamlessly alongside text, with the minimum of manual conﬁguration.<br /> <br /> The solution Vertical alignment As the previous note on currentColor suggests, we are going to treat our icons like text, and get them to accompany text as seamlessly as possible. Fortunately, the SVG will sit on the text’s baseline by default, as if it were a letter. For taller icons, you may expect to be able to use vertical-align: middle. However, contrary to popular belief this does not align around the vertical middle of the font, but the vertical middle of the lowercase letters of the font. Hence, the result will probably be undesirable.<br /> <br /> Instead, adjusting the vertical alignment for a taller icon will probably be a matter of supplying the vertical-align attribute with a length. This length represents the distance above the baseline, and can take a negative value.<br /> <br /> For our Icon layout, we shall stick to sitting icons on the baseline. This is the most robust approach since icons that hang below the baseline may collide with a successive line of text where wrapping occurs.<br /> <br /> Matching height A suitable icon height, starting at the baseline, depends somewhat on the casing of the font and the presence or absence of descenders . Where the letters are all lowercase, and include descenders, things can look particularly unbalanced.<br /> <br /> ↗<br /> <br /> This interactive demo is only available on the Every Layout site<br /> <br /> ↗.<br /> <br /> This perceptual issue can be mitigated by ensuring the ﬁrst letter of the icon’s accompanying text is always uppercase, and that the icon itself is the height of an uppercase letter.<br /> <br /> Actually matching the uppercase letter height per font is another matter. You might expect 1em to be the value, but that is rarely the case. 1em more closely matches the height of the font itself. By making selections of text from a few fonts, you’ll see the font height is often taller than its capital letters. To put it another way: 1em corresponds to font metrics, not letter metrics. In my experimentation, I found that 0.75em more closely matches uppercase letter height. Hence, the presentation attributes for my cross icon being 0.75em each, to make a square following the precedent set by the viewBox. <br /> <br /> <br /> <br /> From left to right: Arial, Georgia, Trebuchet, and Verdana. For each icon, 0.75em matches the uppercase letter height.<br /> <br /> ↗<br /> <br /> However, the emerging cap unit promises to evaluate the individual font for a more accurate match. Since it is currently not supported very well, we can use 0.75em as a fallback in our CSS:<br /> <br /> .icon { height: 0.75em; height: 1cap; width: 0.75em; width: 1cap; }<br /> <br /> Better to have the 0.75em values in the CSS as well, in case an author has omitted the presentational attributes.<br /> <br /> ↗<br /> <br /> As Andy wrote in Relative Sizing With EM units , the icon will now scale automatically with the text: 0.75em is relative to the font-size for the context. For example:<br /> <br /> .small { font-size: 0.75em; } .small .icon { /* Icon height will automatically be 0.75 * 0.75em */ } .big { font-size: 1.25em; } .big .icon { /* Icon height will automatically be 1.25 * 0.75em */ }<br /> <br /> This interactive demo is only available on the Every Layout site<br /> <br /> ↗.<br /> <br /> Matching lowercase letter height If your icon text is to be lowercase, you may bet better results by matching the icon height to a lowercase letter. This is already possible using the ex unit which pertains to the height of a lowercase ‘x’. You might want to enforce lowercase type as well.<br /> <br /> .icon { width: 1ex; height: 1ex; } /* Assume this is the parent or ancestor element for the icon */ .with-icon { text-transform: lowercase; }<br /> <br /> Spacing between icon and text To establish how we manage the spacing of our icons, we have to weigh eﬃciency against ﬂexibility. In design systems, sometimes inﬂexibility can be a virtue, since it enforces regularity and consistency. Consider our cross icon in context, inside a button element and alongside the text “Close”: <br /> <br /> ... Close <br /> <br /> Note the space (unicode point U+0020, if you want to be scientiﬁc) between the SVG and the text node. This adds a visible space between the icon and the text, as I’m sure you can imagine. Now, you don’t have control over this space. Even adding an extra space of the same variety in the source will not help you, since it will be collapsed down to a single space by the browser. But it is a suitable space, because it matches the space between any words in the same context. Again, we are treating the icon like text. A couple of other neat things about using simple text spacing with your icons: 1. If the icon appears on its own, the space does not appear (making the spacing inside the button look uneven) even if it remains in the source. It is collapsed under this condition too. 2. You can use the dir attribute with the rtl (right-to-left) value to swap the icon visually from left to right. The space will still appear between the icon and text becuse the text direction, including the spacing, has been reversed. <br /> <br /> Close <br /> <br /> It’s neat when we can use a fundamental feature of HTML to reconﬁgure our design, rather than having to write bespoke styles and attach them to arbitrary classes. If you do want control of the length of the space, you have to accept an increase in complexity, and a diminishing of reusability: It’s not really possible without setting a context for the icon in order to remove the extant space ﬁrst. In the following code, the context is set by the .with-icon element and the word space eliminated by making it inline-flex.<br /> <br /> .icon { height: 0.75em; height: 1cap; width: 0.75em; width: 1cap; } .with-icon { display: inline-flex; align-items: baseline; }<br /> <br /> The inline-flex display value behaves as its name suggests: it creates a flex context, but the element creating that context itself displays as inline. Employing inline-flex eliminates the word space, freeing us to create a space/gap purely with margin.<br /> <br /> Now we can add some margin. How do we add it in such a way that it always appears in the correct place, like the space did? If I use margin-right: 0.5em, it will work where the icon is on the left, before the text. But if I add dir="rtl" that margin remains on the right, creating a gap on the wrong side.<br /> <br /> ↗<br /> <br /> The answer is CSS Logical Properties . While margin-top, marginright, margin-bottom, and margin-left all pertain to physical orientation and placement, logical properties honor instead the direction of the content. This diﬀers depending on the ﬂow and writing direction, as explained in Boxes. In this case, I would use margin-inline-end with the icon element. This applies margin after the element in the direction of the text (hence -inline-):<br /> <br /> .icon { height: 0.75em; height: 1cap; width: 0.75em; width: 1cap; } .with-icon { display: inline-flex; align-items: baseline; } .with-icon .icon { margin-inline-end: var(--space, 0.5em); }<br /> <br /> One disadvantage with this more ﬂexible approach to spacing is that the margin remains even where text is not supplied. Unfortunately, although you can target lone elements with :onlychild, you cannot target lone elements unaccompanied by text nodes. So it is not possible to remove the margin with just CSS. Instead, you could just remove the with-icon class, since it only creates the conditions for manual spacing by margin. This way, spaces will remain (and collapse automatically as described). In the custom element implementation to come, only if the space prop is supplied will the be made an inline-flex element, and the word space removed.<br /> <br /> Use cases You’ve seen icons before, right? Most frequently you ﬁnd them as part of button controls or links, supplementing a label with a visual cue. Too often our controls only use icons. This is okay for highly familiar icons/symbols like the cross icon from previous examples,<br /> <br /> but more esoteric icons should probably come with a textual description — at least in the early stages of the interface’s usage. Where no (visible) textual label is provided, it’s important there is at least a screen reader perceptible label of some form. You can do one of the following:<br /> <br /> ↗<br /> <br /> 1. Visually hide a textual label (probably supplied in a <span>) 2. Add a to the 3. Add an aria-label directly to the parent element In the component, if a label prop is added to , the element itself is treated as an image, with role="img" and aria-label="[the label value]" applied. Encountered by screen reader outside of a button or link, the icon will be identiﬁed as an image or graphic, and the aria-label value read out. Where is placed inside a button or link, the image role is not announced. The pseudo-image element is simply purposed as the label.<br /> <br /> The generator Use this tool to generate basic Icon CSS and HTML. The code generator tool is only available in the accompanying site . Here is the basic solution, with comments.<br /> <br /> ↗<br /> <br /> HTML<br /> <br /> We can employ the element remote icons.svg ﬁle.<br /> <br /> ↗ to embed the icon from a<br /> <br /> <span class="with-icon"> <br /> <br /> Close </span><br /> <br /> CSS The with-icon class is only necessary if you wish to eliminate the natural word space and employ margin instead.<br /> <br /> .icon { height: 0.75em; /* ↓ Override the em value with `1cap` where `cap` is supported */ height: 1cap; width: 0.75em; width: 1cap; } .with-icon { /* ↓ Set the `inline-flex` context, which eliminates the word space */ display: inline-flex; align-items: baseline; } .with-icon .icon { /* ↓ Use the logical margin property and a --space variable with a fallback */ margin-inline-end: var(--space, 0.5em); }<br /> <br /> As outlined in our blog post Dynamic CSS Components Without JavaScript , you can adjust the space value declaratively, on the element itself, using the style attribute:<br /> <br /> ↗<br /> <br /> <span class="with-icon"> <br /> <br /> Close </span><br /> <br /> The component A custom element implementation of the Icon is available for download .<br /> <br /> ↗<br /> <br /> Props API The following props (attributes) will cause the Icon component to re-render when altered. They can be altered by hand—in browser developer tools—or as the subjects of inherited application state.<br /> <br /> Name<br /> <br /> space<br /> <br /> label<br /> <br /> Type<br /> <br /> string<br /> <br /> string<br /> <br /> Default<br /> <br /> Description<br /> <br /> null<br /> <br /> The space between the text and the icon. If null, natural word spacing is preserved<br /> <br /> null<br /> <br /> Turns the element into an image in assistive technologies and adds an aria-label of the value<br /> <br /> Examples Button with icon and accompanying text In the following example, the provides an icon and accompanying text to a button. The assumes the button’s accessible name, meaning the button will be announced as “Close, button” (or equivalent) in screen reader software. The SVG is ignored, since it provides no textual information. In this case, an explicit space/margin of 0.5em has been set. <br /> <br /> <br /> <br /> Close <br /> <br /> Button with just an icon<br /> <br /> Where not accompanying text is provided, the button is in danger of not having an accessible name. By providing a label prop, the is communicated as a labeled image to screen reader software (using role="img" and aria-label="[the prop value]"). This is the authored code: <br /> <br /> <br /> <br /> <br /> <br /> And this is the code after instantiation:</p>
+	    	</div>
+    </div>
+</div>
+<div class="modal fade" id="report" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+	<div class="modal-content">
+	    <form role="form" method="post" action="https://dokumen.pub/report/every-layout-relearn-css-layout-by-example-2nbsped">
+		<div class="modal-header">
+		    <h5 class="modal-title pull-left">Report "Every layout relearn CSS layout by example [2&nbsp;ed.]"</h5>
+		    <button type="button" class="btn btn-dark pull-right" data-dismiss="modal" aria-hidden="true">&times;</button>
+		</div>
+		<div class="modal-body">
+		    <div class="form-group">
+			<input type="text" name="name" required="required" class="form-control border" placeholder="Enter your name" />
+		    </div>
+		    <div class="form-group">
+			<input type="email" name="email" required="required" class="form-control border" placeholder="Enter your Email" />
+		    </div>
+		    <div class="form-group">
+			<select name="reason" required="required" class="form-control border">
+			    <option value="">--- Select Reason ---</option>
+			    <option value="pornographic">Pornographic</option>
+			    <option value="defamatory">Defamatory</option>
+			    <option value="illegal">Illegal/Unlawful</option>
+			    <option value="spam">Spam</option>
+			    <option value="others">Other Terms Of Service Violation</option>
+			    <option value="copyright">File a copyright complaint</option>
+			</select>
+		    </div>
+		    <div class="form-group">
+			<textarea name="description" required="required" rows="6" class="form-control border" placeholder="Enter description"></textarea>
+		    </div>
+		    <div class="form-group">
+			<div class="d-inline-block">
+			    <div class="g-recaptcha" data-sitekey="6Ld9bsMUAAAAAFUJ3kb3qtJCvEbX7XEDp18HE5iQ"></div>
+			</div>
+		    </div>
+		    <script src='https://www.google.com/recaptcha/api.js'></script>
+		</div>
+		<div class="modal-footer">
+		    <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
+		    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+		</div>
+	    </form>
+	</div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var inner_height = $(window).innerHeight() - 260;
+        $('#pdfviewer').css({"height": inner_height + "px"});
+    });
+</script>
+	<div class="container-fluid my-3">
+	    <!-- BEGIN FOOTER -->
+	    <footer id="footer" class="row bg-light">
+		<div id="footer-top" class="col-12">
+		    <div class="row">
+			<div class="col-md-4 col-12">
+			    <a href="https://dokumen.pub/">
+				<img src="https://dokumen.pub/dokumenpub/assets/img/dokumenpub_logo.png" class="mh-logo" alt="dokumen.pub" />
+			    </a>
+			    <hr />
+			    <h3>Contact information</h3>
+			    <p>
+				<strong>Michael Browner</strong><br />
+				<i class="fa fa-envelope-o"></i> <a href="/cdn-cgi/l/email-protection#4e272028210e2a21253b232b20603e3b2c" title="send an email to info@dokumen.pub"><span class="__cf_email__" data-cfemail="a7cec9c1c8e7c3c8ccd2cac2c989d7d2c5">[email&#160;protected]</span></a><br /><br />
+				<span><i class="fa fa-map-marker mr-1"></i>Address: </span>
+				<address>1918 St.Regis, Dorval, Quebec, H9P 1H6, Canada.</address>
+			    </p>
+			</div>
+			<div class="col-md-4 col-12">
+			    <h3>Support & Legal</h3>
+			    <hr />
+			    <ul class="footer-links">
+				<li><a href="https://dokumen.pub/about">O nas</a></li>
+				<li><a href="https://dokumen.pub/contact">Skontaktuj się z nami</a></li>
+				<li><a href="https://dokumen.pub/copyright">Prawo autorskie</a></li>
+				<li><a href="https://dokumen.pub/privacy">Polityka prywatności</a></li>
+				<li><a href="https://dokumen.pub/term">Warunki</a></li>
+				<li><a href="https://dokumen.pub/faqs">FAQs</a></li>
+				<li><a href="https://dokumen.pub/cookie_policy">Cookie Policy</a></li>
+			    </ul>
+			</div>
+			<!-- BEGIN NEWSLETTER -->
+			<div class="col-md-4 col-12">
+			    <form action="https://dokumen.pub/newsletter" method="post">
+				<div id="newsletter" class="w-100">
+				    <h3>Subscribe to our newsletter</h3>
+				    <hr />
+				    <p>Be the first to receive exclusive offers and the latest news on our products and services directly in your inbox.</p>
+				    <div class="input-group">
+					<input type="text" placeholder="Enter your E-mail" name="newsletter_email" id="newsletter_email" class="form-control" required="required" />
+					<span class="input-group-btn">
+					    <button class="btn btn-primary" type="submit"><i class="fa fa-bell-o mr-1"></i>Subscribe</button>
+					</span>
+				    </div>
+				</div>
+			    </form>
+			</div>
+			<!-- END NEWSLETTER -->
+		    </div>
+		</div>
+		<!-- BEGIN COPYRIGHT -->
+		<div id="copyright" class="col-12 my-3 px-3">
+		    Copyright © 2025 DOKUMEN.PUB. All rights reserved.
+		    <!-- BEGIN SOCIAL NETWORKS -->
+		    <ul class="social-networks">
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+			<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+			<li><a href="#"><i class="fa fa-rss"></i></a></li>
+		    </ul>
+		    <!-- END SOCIAL NETWORKS -->
+		</div>
+		<!-- END COPYRIGHT -->
+	    </footer>
+	    <!-- END FOOTER -->
+	</div>
+
+		    <!-- Global site tag (gtag.js) - Google Analytics -->
+	    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152949545-1"></script>
+	    <script>
+	      window.dataLayer = window.dataLayer || [];
+	      function gtag(){dataLayer.push(arguments);}
+	      gtag('js', new Date());
+
+	      gtag('config', 'UA-152949545-1');
+	    </script>
+	
+	<!-- cookie policy -->
+	<div class="box-cookie-policy text-light small" id="DOKUMENPUB_cookie_box">
+	    Unsere Partner sammeln Daten und verwenden Cookies zur Personalisierung und Messung von Anzeigen. <a href="https://dokumen.pub/cookie_policy" target="_blank">Erfahren Sie, wie wir und unser Anzeigenpartner Google Daten sammeln und verwenden</a>. <a href="#" class="btn btn-primary" onclick="accept_DOKUMENPUB_cookie_box();return false;"><em><i class="fa fa-close mr-1"></i></em>Cookies zulassen</a>
+	</div>
+	<script>
+	    function accept_DOKUMENPUB_cookie_box() {
+		document.cookie = "DOKUMENPUB_cookie_box_viewed=1;max-age=15768000;path=/";
+		hide_DOKUMENPUB_cookie_box();
+	    }
+
+	    function hide_DOKUMENPUB_cookie_box() {
+		var cb = document.getElementById('DOKUMENPUB_cookie_box');
+		if (cb) {
+		    cb.parentElement.removeChild(cb);
+		}
+	    }
+
+	    (function () {
+		var DOKUMENPUB_cookie_box_viewed = (function (name) {
+		    var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+		    return matches ? decodeURIComponent(matches[1]) : undefined;
+		})('DOKUMENPUB_cookie_box_viewed');
+
+		if (DOKUMENPUB_cookie_box_viewed) {
+		    hide_DOKUMENPUB_cookie_box();
+		}
+	    })();
+	</script>
+	<!-- end cookie policy -->
+	
+	<button class="btn btn-lg btn-dark" onclick="topFunction()" id="myBtnGoToTop" title="Go to top"><i class="fa fa-arrow-circle-o-up"></i></button>
+	<script>
+	    boxcookiepolicy = $('.box-cookie-policy').innerHeight();
+	    // Get the button:
+	    mybutton = document.getElementById("myBtnGoToTop");
+
+	    // When the user scrolls down 20px from the top of the document, show the button
+	    window.onscroll = function() {scrollFunction()};
+
+	    function scrollFunction() {
+	      if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+		mybutton.style.display = "block";
+		mybutton.style.bottom = (boxcookiepolicy + 60) + "px";
+	      } else {
+		mybutton.style.display = "none";
+	      }
+	    }
+
+	    // When the user clicks on the button, scroll to the top of the document
+	    function topFunction() {
+	      document.body.scrollTop = 0; // For Safari
+	      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	    }
+	</script>
+    </body>
+</html>
+
+
