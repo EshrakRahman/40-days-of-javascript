@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <script src="practice.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+      <main class="container">
+    
+    <!-- Product Card -->
+    <section class="product-card">
+      <img src="../image-waffle-desktop.jpg" alt="Product Image" class="product-image" />
+      <div class="product-info">
+        <h1 class="product-title">Classic Waffle</h1>
+        <p class="product-description">Crispy outside, fluffy inside. Served with syrup and berries.</p>
+        <p class="product-price">$4.99</p>
+        <div class="product-actions">
+          <button class="decrease">−</button>
+          <span class="quantity">0</span>
+          <button class="increase">+</button>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- To-Do List -->
+    <section class="todo-card">
+      <h2 class="todo-title">📝 To-Do List</h2>
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Add a new task..." required />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todo-list">
+        <!-- Items will go here -->
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>
